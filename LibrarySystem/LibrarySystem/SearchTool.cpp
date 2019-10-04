@@ -7,6 +7,9 @@ std::mutex mm;
 
 string SearchTool::bookName = "Book.dat";
 
+int SearchTool::bookInfoSize = 5 * avglen + sizeof(long) + 1 + sizeof(int) + sizeof(float);
+
+//判断s1中名字部分是否有子串s2
 bool SearchTool::find(char s1[], char s2[])
 {
 	int len = strlen(s2);
@@ -27,16 +30,24 @@ bool SearchTool::find(char s1[], char s2[])
 	}
 	return false;
 }
-
-void split(char * s1, char *s2, int offset, int count)
+//按照offset、count切分s1后存储到s2中
+void SearchTool::split(char * s1, char *s2, int offset, int count)
 {
 	for (int k = 0, i = offset; k < count; i++)
 		s2[k++] = s1[i];
 	s2[count] = '\0';
 }
 
+bool SearchTool::cmp(char * s1, char * s2, int size)
+{
+	for (int i = 0; i < size; i++)
+		if (s1[i] != s2[i])
+			return false;
+	return true;
+}
+
 // 将得到的书本信息装进一个Book结构体并返回
-Book kup(char * content)
+Book SearchTool::bookup(char * content)
 {
 	Book tmp;
 	char t[50];
@@ -80,6 +91,7 @@ void SearchTool::SubSearch(std::string n)
 			char t[15];
 			for (int i = avglen, k = 0; i < size; i++)
 				t[k++] = tmp_name[i];
+			// 此处动用了锁，防止多线程的情况下同时调用index
 			mm.lock();
 			index.push_back(btol(t));
 			mm.unlock();
@@ -87,7 +99,7 @@ void SearchTool::SubSearch(std::string n)
 	}
 }
 
-std::vector<Book> SearchTool::SearchName(std::string name)
+std::vector<Book> SearchTool::SearchBookName(std::string name)
 {
 	std::vector<Book> book;
 	int len = name.size();
@@ -128,27 +140,48 @@ std::vector<Book> SearchTool::SearchName(std::string name)
 
 	// 根据地址查找书本信息
 	Book tmp_book;
-	int size = 5 * avglen + sizeof(long) + 1 + sizeof(int) + sizeof(float);
 	char tmp[500];
 	std::ifstream in("Book.dat", std::ios::in | std::ios::binary);
 	for (std::vector<long>::iterator it = index.begin(); it != index.end(); it++)
 	{
 		in.seekg((*it), std::ios::beg);
-		in.read(tmp, size);
-		tmp[size] = '\0';
-		book.push_back(kup(tmp));
+		in.read(tmp, bookInfoSize);
+		tmp[bookInfoSize] = '\0';
+		book.push_back(bookup(tmp));
 	}
 
 	return book;
 }
 
-std::vector<Book> SearchTool::SearchNum(int num)
+// 按照编号查找书本信息
+std::vector<Book> SearchTool::SearchBookNum(int num)
 {
+	ifstream io("BookNumIndex.dat", ios::in | ios::binary);
 	std::vector<Book> book;
+	int size = sizeof(int) + sizeof(long);
+	char tmp[500];
+	char n[20];
+	itob(num, n);//将编号转换为字符串
+
+	while (!io.eof())
+	{
+		io.read(tmp, size);
+		tmp[size] = '\0';
+		if (cmp(tmp, n, sizeof(int)))//找到匹配的之后直接根据地址获取书本信息
+		{
+			split(tmp, n, sizeof(int), sizeof(long));
+			long idx = btol(n);
+			ifstream in(bookName, ios::in | ios::binary);
+			in.seekg(idx, ios::beg);
+			in.read(tmp, bookInfoSize);
+			book.push_back(bookup(tmp));
+			return book;
+		}
+	}
 	return book;
 }
 
-std::vector<Book> SearchTool::SearchAuthor(char author[10])
+std::vector<Book> SearchTool::SearchBookAuthor(char author[10])
 {
 	std::vector<Book> book;
 	return book;

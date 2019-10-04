@@ -30,19 +30,37 @@ struct BookNameIndex
 	long index;
 };
 
+struct BookNumIndex
+{
+	int num;
+	long index;
+};
+
 class SearchTool
 {
 private:
+	static int bookInfoSize;
 	static string bookName;
+	// 在书名索引中查找字符串 n
 	static void SubSearch(std::string n);
+	// 判断s1中是否有s2
 	static bool find(char s1[], char s2[]);
+	// 将content中的书本信息装入结构体并返回
+	static Book bookup(char *content);
+	// 将s1按照offset、count切割后装入s2
+	static void split(char *s1, char *s2, int offset, int count);
+	// 判断size长度内 s1 与 s2 是否相同
+	static bool cmp(char *s1, char *s2, int size);
 
 public:
-	// 静态操作方法
-	static std::vector<Book> SearchName(std::string name);
-	static std::vector<Book> SearchNum(int num);
-	static std::vector<Book> SearchAuthor(char author[10]);
+	// 按照书名查找
+	static std::vector<Book> SearchBookName(std::string name);
+	// 按照书本编号查找
+	static std::vector<Book> SearchBookNum(int num);
+	// 按照作者查找
+	static std::vector<Book> SearchBookAuthor(char author[10]);
 
+	// 下方为长整型、整型、浮点型与字符串的转换
 	static void ltob(long n, char * s)
 	{
 		unsigned mask = 0xff;
