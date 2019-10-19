@@ -75,6 +75,14 @@ float btof(char *s)
 	return *res;
 }
 
+bool cmp(char * s1, char * s2, int size)
+{
+	for (int i = 0; i < size; i++)
+		if (s1[i] != s2[i])
+			return false;
+	return true;
+}
+
 void bookdown(Book* it, fstream*io)
 {
 	char tmp[200];
@@ -88,7 +96,6 @@ void bookdown(Book* it, fstream*io)
 	//其他数据依次写入
 	ltob((*it).pubdate, tmp);
 	io->write(tmp, sizeof(long));
-	tmp[0] = (*it).type;
 	io->write(tmp, 1);
 	itob((*it).borrowNum, tmp);
 	io->write(tmp, 4);
@@ -96,4 +103,22 @@ void bookdown(Book* it, fstream*io)
 	io->write(tmp, 4);
 	ftob((*it).price, tmp);
 	io->write(tmp, 4);
+}
+
+BookIdIndex idup(char *content)
+{
+	BookIdIndex id;
+	char tmp[avglen];
+	split(content, id.id, 0, avglen);
+	split(content, tmp, avglen, sizeof(long));
+	id.index = btol(tmp);
+	split(content, tmp, avglen + sizeof(long), 1);
+	id.isBorrowed[0] = tmp[0];
+}
+
+void split(char * s1, char *s2, int offset, int count)
+{
+	for (int k = 0, i = offset; k < count; i++)
+		s2[k++] = s1[i];
+	s2[count] = '\0';
 }

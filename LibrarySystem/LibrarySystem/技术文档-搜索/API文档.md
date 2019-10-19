@@ -1,6 +1,6 @@
 # API文档
 
-## GenerateData
+## GenerateData（测试用）
 
 ### 创建书本信息
 
@@ -16,7 +16,7 @@
 
 ### 按照书名搜索
 
-`std::vector<Book> SearchTool::SearchBookName(string name)`
+`vector<pair<Book, long>> SearchTool::SearchBookName(string name)`
 
 只需要传入需要搜索的书名即可。此函数为模糊搜索，将传入的书名根据长度切分，最多三等分，然后调用多线程进行搜索。
 
@@ -24,15 +24,27 @@
 
 搜索结束后返回`SearchBookName(string name)`，将`index`中的重复地址去除，然后根据得到的地址在书本文件中直接获取书本信息。将得到的信息存入`vector<Book> book`中返回
 
-结束后返回 book
+结束后返回 book组成的vector
 
 ### 按照编号搜索
 
-`std::vector<Book> SearchTool::SearchBookId(char id[avglen])`
+`pair<Book, long> SearchTool::SearchBookId(char id[avglen])`
 
 传入一个书本编号进行搜索，主要用于管理员界面。
 
 同样返回一个包含书本信息的`vector<Book>`，不同的是，返回值只包含最多一本书。因为本项目默认书本编号不重复，此函数在查到符合的编号后便返回。
+
+### 按照ISBN搜索
+
+`pair<Book, long> SearchBookISBN(char id[avglen])`
+
+传入对应的ISBN编号就可以搜索，如果没有，返回的地址将是 -1.
+
+### 查找某类书所有书本
+
+需要传入这类书在`Book.dat`中的地址，然后查找
+
+返回一个`vector<pair<BookIdIndex, long>>`
 
 ## 工具
 
@@ -75,3 +87,7 @@
 ### float btof(char *s)
 
 解释为浮点型
+
+### BookIdIndex idup(char *content)
+
+将字符串内的内容转换为 `BookIdIndex`类型
