@@ -4,51 +4,54 @@
 
 using namespace std;
 const int avglen = 30;
-const int book_info_size = 5 * avglen + sizeof(long) + 1 + sizeof(int) * 2 + sizeof(float);
+const int book_info_size = 5 * avglen + sizeof(long) + sizeof(int) * 2 + sizeof(float);
+const int book_id_size = sizeof(int) + sizeof(long) + 1;
+const int book_name_size = sizeof(long) + avglen;
 const string BookFile = "Book.dat";
 const string BookNameIndexFile = "BookNameIndex";
 const string BookIdIndexFile = "BookIdIndex";
 
 struct Book
 {
-	string id;
-	string name;
-	string author;
+	string id;			//ISBN
+	string name;		//书名
+	string author;		//作者
 	string press;		//出版社
 	string category;	//学科
-	bool type;
-	long pubdate;
-	int borrowNum;
-	int num;
-	float price;
+	//bool type;			//
+	long pubdate;		//出版日期
+	int borrowNum;		//当前借出的数量
+	int num;			//当前数量
+	float price;		//价格
 };
 
 struct BookNameIndex
 {
-	char name[avglen];
-	long index;
+	char name[avglen];	//书名
+	long index;			//地址
 };
 
-struct BookNumIndex
+struct BookIdIndex
 {
-	int num;
-	long index;
+	char id[avglen];			//书本编号
+	long index;		//地址
+	char isBorrowed[1];	//是否借出
 };
 
 const int user_avglen = 30;
 
 struct User
 {
-	char nickName[user_avglen];
-	char realName[user_avglen];
-	char major[user_avglen];
-	char grade[user_avglen];
-	char pwd[user_avglen];
-	char phone[user_avglen];
-	char email[user_avglen];
-	char sex;
-	int age;
-	long id;
+	char nickName[user_avglen];	//昵称
+	char realName[user_avglen];	//真实姓名
+	char major[user_avglen];	//专业
+	char grade[user_avglen];	//年纪
+	char pwd[user_avglen];		//密码
+	char phone[user_avglen];	//手机
+	char email[user_avglen];	//邮箱
+	char sex;					//性别
+	int age;					//年龄
+	long id;					//学工号
 };
 
 void ltob(long n, char * s);
@@ -57,5 +60,13 @@ void ftob(float n, char *s);
 long btol(char *s);
 int btoi(char *s);
 float btof(char *s);
+bool cmp(char*s1, char*s2, int size);
 
+// 将输入的书籍写入文件
 void bookdown(Book* book, fstream*io);
+
+// 返回字符串中的 BookIdIndex
+BookIdIndex idup(char *content);
+
+// 切分工具，将 s1 从 offset 开始 count 个字符放入 s2
+void split(char * s1, char *s2, int offset, int count);
