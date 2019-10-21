@@ -1,7 +1,7 @@
 #pragma once
 #include<vector>
-#include"Data.h"
-using namespace std;
+#include "Data.h"
+
 
 class GenerateData
 {
