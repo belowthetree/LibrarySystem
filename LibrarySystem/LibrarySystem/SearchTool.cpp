@@ -235,6 +235,28 @@ vector<pair<BookIdIndex, long>> SearchTool::SearchIdOfBook(long addr)
 	return bookId;
 }
 
+pair<User, long> SearchTool::SearchUserId(char id[])
+{
+	pair<User, long> user;
+	fstream io(UserFile, ios::in | ios::binary);
+	char tmp[user_info_size + 1];
+
+	while (!io.eof())
+	{
+		io.read(tmp, user_info_size);
+		if (cmp(tmp, id, sizeof(long)))
+		{
+			user.first = userup(tmp);
+			user.second = io.tellg();
+			user.second -= user_info_size;
+			break;
+		}
+	}
+
+	io.close();
+	return user;
+}
+
 SearchTool::SearchTool()
 {
 }

@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "ModifyTool.h"
 
-
+// 修改某类书
 void ModifyTool::ChangeBookFile(pair<Book, long> book)
 {
 	ofstream out(BookFile, ios::out | ios::binary);
@@ -11,6 +11,7 @@ void ModifyTool::ChangeBookFile(pair<Book, long> book)
 	out.close();
 }
 
+// 增加某类书
 void ModifyTool::AddBookFile(Book book)
 {
 	fstream io(BookFile, ios::out | ios::binary | ios::in);
@@ -52,6 +53,7 @@ void ModifyTool::AddBookFile(Book book)
 	io.close();
 }
 
+// 增加某本书
 void ModifyTool::AddBookIdFile(BookIdIndex bookid)
 {
 	fstream io(BookIdIndexFile, ios::in | ios::out | ios::binary);
@@ -80,6 +82,7 @@ void ModifyTool::AddBookIdFile(BookIdIndex bookid)
 	io.close();
 }
 
+// 修改某本书
 void ModifyTool::ChangeBookIdFile(BookIdIndex bookid, char preid[])
 {
 	fstream io(BookIdIndexFile, ios::in | ios::out | ios::binary);
@@ -104,6 +107,45 @@ void ModifyTool::ChangeBookIdFile(BookIdIndex bookid, char preid[])
 	io.close();
 }
 
+// 修改某个用户
+void ModifyTool::ChangeUserFile(pair<User, long> user)
+{
+	fstream io(UserFile, ios::in | ios::out | ios::binary);
+
+	io.seekg(user.second, ios::beg);
+	userdown(&user.first, &io);
+
+	io.close();
+}
+
+//增加某个用户
+void ModifyTool::AddUserFile(User user)
+{
+	fstream io(UserFile, ios::in | ios::out | ios::binary);
+	char tmp[user_info_size + 5];
+	char mask[user_avglen + 5];
+	long addr = -1;
+
+	memset(mask, -1, user_avglen);
+
+	while (!io.eof())
+	{
+		io.read(tmp, user_info_size);
+		if (cmp(tmp, mask, user_avglen))
+		{
+			addr = io.tellg();
+			break;
+		}
+	}
+	io.seekg(ios::end, ios::beg);
+	if (addr == -1)
+		addr = io.tellg();
+
+	io.seekp(addr, ios::beg);
+	userdown(&user, &io);
+
+	io.close();
+}
 
 
 ModifyTool::ModifyTool()

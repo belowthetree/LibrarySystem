@@ -35,6 +35,9 @@ public:
 	// 查找某一类所有书
 	static vector<pair<BookIdIndex, long>> SearchIdOfBook(long addr);
 
+	// 根据学工号查询用户
+	static pair<User, long> SearchUserId(char id[]);
+
 public:
 	SearchTool();
 	~SearchTool();

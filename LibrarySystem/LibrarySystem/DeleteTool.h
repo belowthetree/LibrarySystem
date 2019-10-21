@@ -19,6 +19,9 @@ public:
 	// 删除某类书书名索引
 	static void ClearBookName(long addr);
 
+	// 删除某个用户
+	static void DeleteUser(long addr);
+
 public:
 	DeleteTool();
 	~DeleteTool();

@@ -97,6 +97,19 @@ void DeleteTool::ClearBookName(long addr)
 	io.close();
 }
 
+void DeleteTool::DeleteUser(long addr)
+{
+	fstream io(UserFile, ios::out | ios::binary);
+	char mask[user_avglen + 5];
+
+	io.seekp(addr, ios::beg);
+	memset(mask, -1, user_avglen);
+
+	io.write(mask, user_avglen);
+
+	io.close();
+}
+
 // 清除某类书所有编号索引
 void DeleteTool::ClearBookId(long addr)
 {

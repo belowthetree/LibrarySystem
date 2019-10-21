@@ -105,6 +105,48 @@ void bookdown(Book* it, fstream*io)
 	io->write(tmp, 4);
 }
 
+User userup(char *content)
+{
+	User user;
+	char tmp[user_avglen + 5];
+	split(content, tmp, 0, sizeof(long));
+	user.id = btol(tmp);
+	split(content, tmp, sizeof(long), user_avglen);
+	split(tmp, user.realName, 0, user_avglen);
+	split(content, tmp, sizeof(long) + user_avglen, user_avglen);
+	split(tmp, user.major, 0, user_avglen);
+	split(content, tmp, sizeof(long) + user_avglen * 2, user_avglen);
+	split(tmp, user.grade, 0, user_avglen);
+	split(content, tmp, sizeof(long) + user_avglen * 3, user_avglen);
+	split(tmp, user.pwd, 0, user_avglen);
+	split(content, tmp, sizeof(long) + user_avglen * 4, user_avglen);
+	split(tmp, user.phone, 0, user_avglen);
+	split(content, tmp, sizeof(long) + user_avglen * 5, user_avglen);
+	split(tmp, user.email, 0, user_avglen);
+	split(content, tmp, sizeof(long) + user_avglen * 6, 1);
+	user.sex[0] = tmp[0];
+	split(content, tmp, sizeof(long) + user_avglen * 6 + 1, sizeof(int));
+	user.age = btoi(tmp);
+
+	return user;
+}
+
+void userdown(User *user, fstream *io)
+{
+	char tmp[user_avglen + 5];
+	ltob(user->id, tmp);
+	io->write(tmp, sizeof(long));
+	io->write(user->realName, user_avglen);
+	io->write(user->major, user_avglen);
+	io->write(user->grade, user_avglen);
+	io->write(user->pwd, user_avglen);
+	io->write(user->phone, user_avglen);
+	io->write(user->email, user_avglen);
+	io->write(user->sex, 1);
+	itob(user->age, tmp);
+	io->write(tmp, sizeof(int));
+}
+
 BookIdIndex idup(char *content)
 {
 	BookIdIndex id;
