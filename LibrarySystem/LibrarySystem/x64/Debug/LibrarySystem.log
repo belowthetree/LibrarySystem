@@ -1,0 +1,9 @@
+﻿  Uic'ing LibrarySystem.ui...
+  Rcc'ing LibrarySystem.qrc...
+  Moc'ing LibrarySystem.h...
+   RCC: Warning: No resources in 'F:\github\Library\LibrarySystem\LibrarySystem\LibrarySystem\LibrarySystem.qrc'.
+  LibrarySystem.cpp
+  main.cpp
+  qrc_LibrarySystem.cpp
+  moc_LibrarySystem.cpp
+  LibrarySystem.vcxproj -> F:\github\Library\LibrarySystem\LibrarySystem\x64\Debug\LibrarySystem.exe

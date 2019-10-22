@@ -15,7 +15,7 @@ void ModifyTool::ChangeBookFile(pair<Book, long> book)
 void ModifyTool::AddBookFile(Book book)
 {
 	fstream io(BookFile, ios::out | ios::binary | ios::in);
-	char * addr;
+	char addr[avglen];
 	long addr_l = 0;
 	char mask[avglen];
 	char tmp[500];

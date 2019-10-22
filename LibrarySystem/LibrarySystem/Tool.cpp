@@ -156,6 +156,8 @@ BookIdIndex idup(char *content)
 	id.index = btol(tmp);
 	split(content, tmp, avglen + sizeof(long), 1);
 	id.isBorrowed[0] = tmp[0];
+
+	return id;
 }
 
 void split(char * s1, char *s2, int offset, int count)
