@@ -46,7 +46,7 @@ void GenerateData::CreateBook(vector<Book> book)
 void GenerateData::CreateUser(vector<User> user)
 {
 	// 计算 Uer 所有数据需要的字节数
-	int size = 7 * user_avglen + 10 + sizeof(int);
+	int size = user_info_size;
 	ofstream out("User.dat", ios::out | ios::binary | ios::trunc);
 	for (vector<User>::iterator it = user.begin(); it != user.end(); it++)
 	{

@@ -92,9 +92,34 @@ int main()
 	//book.push_back(b);
 	//GenerateData::CreateBook(book);
 
+	User user;
+	memset(user.id, 0, user_avglen);
+	memset(user.email, 0, user_avglen);
+	memset(user.grade, 0, user_avglen);
+	memset(user.major, 0, user_avglen);
+	memset(user.phone, 0, user_avglen);
+	memset(user.pwd, 0, user_avglen);
+	memset(user.realName, 0, user_avglen);
+	memcpy(user.id, "12345", 5);
+	user.age = 13;
+	memcpy(user.email, "@168.com", 8);
+	memcpy(user.grade, "大一", 4);
+	memcpy(user.major, "轮机", 4);
+	memcpy(user.phone, "138238", 6);
+	memcpy(user.pwd, "password", 8);
+	memcpy(user.sex, "0", 1);
+	memcpy(user.realName, "Name", 4);
+
+	vector<User> us;
+	us.push_back(user);
+
+	GenerateData::CreateUser(us);
+	char id[user_info_size + 5] = "12345";
+	SearchTool::SearchUserId(id);
+
 	//SearchTool::SearchBookId(10);
 	//SearchTool::SearchBookName("C");
-	DeleteTool::DeleteBook(0);
+	//DeleteTool::DeleteBook(0);
 	//SearchTool::SearchBookName("C");
 
 	/*thread th1(cal);
