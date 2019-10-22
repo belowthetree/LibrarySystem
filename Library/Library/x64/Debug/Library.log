@@ -1,1 +1,8 @@
-﻿  Library.vcxproj -> F:\cloud\LibrarySystem\Library\x64\Debug\Library.exe
+﻿  Library.cpp
+  login.cpp
+  main.cpp
+moc_login.obj : warning LNK4099: 未找到 PDB“vc141.pdb”(使用“moc_login.obj”或在“F:\cloud\LibrarySystem\Library\x64\Debug\vc141.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+moc_Library.obj : warning LNK4099: 未找到 PDB“vc141.pdb”(使用“moc_Library.obj”或在“F:\cloud\LibrarySystem\Library\x64\Debug\vc141.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+moc_admin.obj : warning LNK4099: 未找到 PDB“vc141.pdb”(使用“moc_admin.obj”或在“F:\cloud\LibrarySystem\Library\x64\Debug\vc141.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+qrc_Library.obj : warning LNK4099: 未找到 PDB“vc141.pdb”(使用“qrc_Library.obj”或在“F:\cloud\LibrarySystem\Library\x64\Debug\vc141.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  Library.vcxproj -> F:\cloud\LibrarySystem\Library\x64\Debug\Library.exe
