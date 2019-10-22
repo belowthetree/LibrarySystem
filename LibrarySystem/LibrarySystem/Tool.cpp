@@ -1,6 +1,6 @@
 #include "pch.h"
 #include"Data.h"
-// ÏÂ·½Îª³¤ÕûÐÍ¡¢ÕûÐÍ¡¢¸¡µãÐÍÓë×Ö·û´®µÄ×ª»»
+// ä¸‹æ–¹ä¸ºé•¿æ•´åž‹ã€æ•´åž‹ã€æµ®ç‚¹åž‹ä¸Žå­—ç¬¦ä¸²çš„è½¬æ¢
 void ltob(long n, char * s)
 {
 	unsigned mask = 0xff;
@@ -86,14 +86,14 @@ bool cmp(char * s1, char * s2, int size)
 void bookdown(Book* it, fstream*io)
 {
 	char tmp[200];
-	//Ç°ÎåÏî string £¬³¤¶È¹æ¶¨Îª avglen
+	//å‰äº”é¡¹ string ï¼Œé•¿åº¦è§„å®šä¸º avglen
 	io->write((*it).id.c_str(), avglen);
 	io->write((*it).name.c_str(), avglen);
 	io->write((*it).author.c_str(), avglen);
 	io->write((*it).press.c_str(), avglen);
 	io->write((*it).category.c_str(), avglen);
 
-	//ÆäËûÊý¾ÝÒÀ´ÎÐ´Èë
+	//å…¶ä»–æ•°æ®ä¾æ¬¡å†™å…¥
 	ltob((*it).pubdate, tmp);
 	io->write(tmp, sizeof(long));
 	io->write(tmp, 1);
@@ -125,7 +125,7 @@ User userup(char *content)
 
 	split(content, user.sex, user_avglen * 7, 1);
 
-	split(content, tmp, sizeof(long) + user_avglen * 6 + 1, sizeof(int));
+	split(content, tmp, user_avglen * 7 + 1, sizeof(int));
 	user.age = btoi(tmp);
 
 	return user;
