@@ -3,6 +3,7 @@
 #include "SearchTool.h"
 #include <fstream>
 
+// 会覆盖原有文件
 void GenerateData::CreateBook(vector<Book> book)
 {
 	// 一本书的数据长度，前五项 string 型暂时规定长度为 avglen
@@ -41,6 +42,7 @@ void GenerateData::CreateBook(vector<Book> book)
 	out.close();
 }
 
+// 会覆盖原有文件
 void GenerateData::CreateUser(vector<User> user)
 {
 	// 计算 Uer 所有数据需要的字节数
@@ -51,17 +53,18 @@ void GenerateData::CreateUser(vector<User> user)
 		char tmp[200];
 		//依次写入数据
 		//前几项 字符串 ，长度规定为 user_avglen
-		out.write((*it).id.c_str(), user_avglen);
-		out.write((*it).name.c_str(), user_avglen);
-		out.write((*it).major.c_str(), user_avglen);
-		out.write((*it).grade.c_str(), user_avglen);
-		out.write((*it).pwd.c_str(), user_avglen);
-		out.write((*it).phone.c_str(), user_avglen);
-		out.write((*it).email.c_str(), user_avglen);
+		out.write((*it).id, user_avglen);
+		out.write((*it).realName, user_avglen);
+		out.write((*it).major, user_avglen);
+		out.write((*it).grade, user_avglen);
+		out.write((*it).pwd, user_avglen);
+		out.write((*it).phone, user_avglen);
+		out.write((*it).email, user_avglen);
+
+		out.write((*it).sex, 1);
 		//因为数字没法直接存为二进制，所以先转换装进临时数组 tmp
 		itob((*it).age, tmp);
 		out.write(tmp, sizeof(int));
-		out.write((*it).sex.c_str(),10);
 	}
 	out.close();
 	int len = user.size();
@@ -69,7 +72,7 @@ void GenerateData::CreateUser(vector<User> user)
 	for (int i = 0; i < len; i++)
 	{
 		char tmp[100];
-		out.write(user[i].id.c_str(), user_avglen);
+		out.write(user[i].id, user_avglen);
 
 		//地址
 		long idx = i * size;

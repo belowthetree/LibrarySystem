@@ -109,22 +109,22 @@ User userup(char *content)
 {
 	User user;
 	char tmp[user_avglen + 5];
-	split(content, tmp, 0, sizeof(long));
-	user.id = btol(tmp);
-	split(content, tmp, sizeof(long), user_avglen);
-	split(tmp, user.realName, 0, user_avglen);
-	split(content, tmp, sizeof(long) + user_avglen, user_avglen);
-	split(tmp, user.major, 0, user_avglen);
-	split(content, tmp, sizeof(long) + user_avglen * 2, user_avglen);
-	split(tmp, user.grade, 0, user_avglen);
-	split(content, tmp, sizeof(long) + user_avglen * 3, user_avglen);
-	split(tmp, user.pwd, 0, user_avglen);
-	split(content, tmp, sizeof(long) + user_avglen * 4, user_avglen);
-	split(tmp, user.phone, 0, user_avglen);
-	split(content, tmp, sizeof(long) + user_avglen * 5, user_avglen);
-	split(tmp, user.email, 0, user_avglen);
-	split(content, tmp, sizeof(long) + user_avglen * 6, 1);
-	user.sex[0] = tmp[0];
+	split(content, user.id, 0, user_avglen);
+
+	split(content, user.realName, user_avglen, user_avglen);
+
+	split(content, user.major, user_avglen * 2, user_avglen);
+
+	split(content, user.grade, user_avglen * 3, user_avglen);
+
+	split(content, user.pwd, user_avglen * 4, user_avglen);
+
+	split(content, user.phone, user_avglen * 5, user_avglen);
+
+	split(content, user.email, user_avglen * 6, user_avglen);
+
+	split(content, user.sex, user_avglen * 7, 1);
+
 	split(content, tmp, sizeof(long) + user_avglen * 6 + 1, sizeof(int));
 	user.age = btoi(tmp);
 
@@ -134,8 +134,8 @@ User userup(char *content)
 void userdown(User *user, fstream *io)
 {
 	char tmp[user_avglen + 5];
-	ltob(user->id, tmp);
-	io->write(tmp, sizeof(long));
+
+	io->write(user->id, user_avglen);
 	io->write(user->realName, user_avglen);
 	io->write(user->major, user_avglen);
 	io->write(user->grade, user_avglen);

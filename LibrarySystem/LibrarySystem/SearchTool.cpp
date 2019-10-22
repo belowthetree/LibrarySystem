@@ -244,7 +244,7 @@ pair<User, long> SearchTool::SearchUserId(char id[])
 	while (!io.eof())
 	{
 		io.read(tmp, user_info_size);
-		if (cmp(tmp, id, sizeof(long)))
+		if (cmp(tmp, id, user_avglen))
 		{
 			user.first = userup(tmp);
 			user.second = io.tellg();

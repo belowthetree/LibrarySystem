@@ -46,7 +46,7 @@ const int user_info_size = user_avglen * 6 + sizeof(int) + sizeof(long) + 1;
 
 struct User
 {
-	long id;					//学工号
+	char id[user_avglen];					//学工号
 	char realName[user_avglen];	//真实姓名
 	char major[user_avglen];	//专业
 	char grade[user_avglen];	//年纪
