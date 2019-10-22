@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MyMessage</class>
+ <widget class="QWidget" name="MyMessage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1054</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MyMessage</string>
+  </property>
+  <widget class="QTreeWidget" name="treeWidget">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>80</y>
+     <width>911</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <attribute name="headerDefaultSectionSize">
+    <number>300</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>留言编号</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>留言</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>留言时间</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>510</y>
+     <width>112</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
