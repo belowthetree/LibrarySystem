@@ -1,0 +1,8 @@
+﻿  moc Library.h
+  Library.cpp
+  main.cpp
+  qrc_Library.cpp
+  moc_admin.cpp
+  moc_login.cpp
+  moc_Library.cpp
+  Library.vcxproj -> F:\cloud\LibrarySystem\Library\x64\Debug\Library.exe
