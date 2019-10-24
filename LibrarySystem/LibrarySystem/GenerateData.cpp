@@ -19,13 +19,18 @@ void GenerateData::CreateBook(vector<Book> book)
 	int len = book.size();
 	for (int i = 0; i < len; i++)
 	{
-		char s[100];
-		out.write(book[i].id.c_str(), avglen);
+		for (int j = 0; j < book[i].num; j++)
+		{
+			char s[100];
+			memset(s, 0, 100);
+			itob(j, s);
+			out.write(s, avglen);
 
-		//µØÖ·
-		long idx = i * size;
-		ltob(idx, s);
-		out.write(s, sizeof(long));
+			//µØÖ·
+			long idx = i * size;
+			ltob(idx, s);
+			out.write(s, sizeof(long));
+		}
 	}
 	out.close();
 	out.open(BookNameIndexFile, ios::out | ios::binary | ios::app);

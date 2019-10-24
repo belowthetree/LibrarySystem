@@ -51,7 +51,7 @@ Book SearchTool::bookup(char * content)
 	Book tmp;
 	char t[avglen + 5];
 	split(content, t, 0, avglen);
-	tmp.id = t;
+	tmp.isbn = t;
 	split(content, t, avglen, avglen);
 	tmp.name = t;
 	split(content, t, avglen * 2, avglen);

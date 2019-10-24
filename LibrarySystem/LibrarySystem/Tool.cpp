@@ -87,7 +87,7 @@ void bookdown(Book* it, fstream*io)
 {
 	char tmp[200];
 	//前五项 string ，长度规定为 avglen
-	io->write((*it).id.c_str(), avglen);
+	io->write((*it).isbn.c_str(), avglen);
 	io->write((*it).name.c_str(), avglen);
 	io->write((*it).author.c_str(), avglen);
 	io->write((*it).press.c_str(), avglen);

@@ -14,7 +14,7 @@ const string BookIdIndexFile = "BookIdIndex";
 
 struct Book
 {
-	string id;			//ISBN
+	string isbn;			//ISBN
 	string name;		//书名
 	string author;		//作者
 	string press;		//出版社
