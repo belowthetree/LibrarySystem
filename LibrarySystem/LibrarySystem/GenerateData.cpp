@@ -3,12 +3,14 @@
 #include "SearchTool.h"
 #include <fstream>
 
-// 会覆盖原有文件
+
 void GenerateData::CreateBook(vector<Book> book)
 {
 	// 一本书的数据长度，前五项 string 型暂时规定长度为 avglen
 	int size = book_info_size;
+	long addr = 0;
 	fstream out(BookFile, ios::out | ios::binary | ios::app);
+	addr = out.tellp();
 	for (vector<Book>::iterator it = book.begin(); it != book.end(); it++)
 	{
 		// 存储书本信息代码较多，放入 Tool.cpp 中
@@ -17,22 +19,27 @@ void GenerateData::CreateBook(vector<Book> book)
 	out.close();
 	out.open(BookIdIndexFile, ios::out | ios::binary | ios::app);
 	int len = book.size();
+	long tmp_addr = addr;
 	for (int i = 0; i < len; i++)
 	{
 		for (int j = 0; j < book[i].num; j++)
 		{
 			char s[100];
 			memset(s, 0, 100);
-			itob(j, s);
+			itob(j + i * 30, s);
 			out.write(s, avglen);
 
 			//地址
-			long idx = i * size;
+			long idx = addr * size;
 			ltob(idx, s);
 			out.write(s, sizeof(long));
+
+			s[0] = 0;
+			out.write(s, 1);
 		}
 	}
 	out.close();
+	addr = tmp_addr;
 	out.open(BookNameIndexFile, ios::out | ios::binary | ios::app);
 	for (int i = 0; i < len; i++)
 	{
@@ -40,7 +47,7 @@ void GenerateData::CreateBook(vector<Book> book)
 		out.write(book[i].name.c_str(), avglen);
 
 		//地址
-		long idx = i * size;
+		long idx = addr * size;
 		ltob(idx, s);
 		out.write(s, sizeof(long));
 	}
