@@ -1,12 +1,13 @@
 #include "pch.h"
 #include "SearchTool.h"
-
+#include "Data.h"
 std::vector<long> index;
 std::mutex mm;
 
 string SearchTool::bookName = "Book.dat";
 
 int SearchTool::bookInfoSize = book_info_size;
+int SearchTool::userInfoSize = user_info_size;
 
 //判断s1中名字部分是否有子串s2
 bool SearchTool::find(char s1[], char s2[])
@@ -51,15 +52,15 @@ Book SearchTool::bookup(char * content)
 	Book tmp;
 	char t[avglen + 5];
 	split(content, t, 0, avglen);
-	tmp.isbn = t;
+	memcpy(tmp.id, t, avglen);
 	split(content, t, avglen, avglen);
-	tmp.name = t;
+	memcpy(tmp.name, t, avglen);
 	split(content, t, avglen * 2, avglen);
-	tmp.author = t;
+	memcpy(tmp.author, t, avglen);
 	split(content, t, avglen * 3, avglen);
-	tmp.press = t;
+	memcpy(tmp.press, t, avglen);
 	split(content, t, avglen * 4, avglen);
-	tmp.category = t;
+	memcpy(tmp.category, t, avglen);
 	split(content, t, avglen * 5, sizeof(long));
 	tmp.pubdate = btol(t);
 	split(content, t, avglen * 5 + sizeof(long), sizeof(int));
@@ -71,6 +72,31 @@ Book SearchTool::bookup(char * content)
 	return tmp;
 }
 
+User SearchTool::userup(char * content) 
+{
+	User tmp;
+	char t[avglen + 5];
+
+	split(content, t, 0, avglen);
+	strcpy_s(tmp.id, t);
+	split(content, t, avglen * 1, avglen);
+	strcpy_s(tmp.realName, t);
+	split(content, t, avglen * 2, avglen);
+	strcpy_s(tmp.major,t);
+	split(content, t, avglen * 3, avglen);
+	strcpy_s(tmp.grade,t);
+	split(content, t, avglen * 4, avglen);
+	strcpy_s(tmp.pwd,t);
+	split(content, t, avglen * 5, avglen);
+	strcpy_s(tmp.phone,t);
+	split(content, t, avglen * 6, avglen);
+	strcpy_s(tmp.email,t);
+	split(content, t, avglen * 7, 2);
+	strcpy_s(tmp.sex, t);
+	split(content, t, avglen * 7 + 2, sizeof(int));
+	tmp.age = btoi(t);
+	return tmp;
+}
 // 对传入的关键词进行搜索（仅限书名搜索使用）
 void SearchTool::SubSearch(std::string n)
 {
@@ -85,7 +111,7 @@ void SearchTool::SubSearch(std::string n)
 		in.read(tmp_name, size);
 		tmp_name[size] = '\0';
 
-		if (cmp(tmp_name, name, avglen))
+		if (find(tmp_name, name))
 		{
 			char t[15];
 			// 找到之后将地址给 t 
@@ -157,11 +183,11 @@ std::vector<pair<Book, long>> SearchTool::SearchBookName(std::string name)
 }
 
 // 按照编号查找书本信息
-pair<Book, long> SearchTool::SearchBookId(char id[avglen])
+pair<Book, BookIdIndex> SearchTool::SearchBookId(char id[avglen])
 {
 	ifstream io(BookIdIndexFile, ios::in | ios::binary);
-	pair<Book, long> book;
-	book.second = -1;
+	pair<Book, BookIdIndex> book;
+	book.second.index = -1;
 	// 得到一个编号对应的大小：Id + 地址
 	int size = book_id_size;
 	char tmp[500];
@@ -180,7 +206,7 @@ pair<Book, long> SearchTool::SearchBookId(char id[avglen])
 			in.seekg(idx, ios::beg);
 			in.read(tmp, bookInfoSize);
 			// bookup 将信息装入 Book 类型中
-			book = pair<Book, long>(bookup(tmp), idx);
+			book = pair<Book, BookIdIndex>(bookup(tmp), bookidup(tmp));
 			return book;
 		}
 	}
@@ -231,7 +257,7 @@ vector<pair<BookIdIndex, long>> SearchTool::SearchIdOfBook(long addr)
 			bookId.push_back(pair<BookIdIndex, long>(tmp_id, t));
 		}
 	}
-	
+
 	return bookId;
 }
 
@@ -244,7 +270,7 @@ pair<User, long> SearchTool::SearchUserId(char id[])
 	while (!io.eof())
 	{
 		io.read(tmp, user_info_size);
-		if (cmp(tmp, id, user_avglen))
+		if (cmp(tmp,id,user_avglen))
 		{
 			user.first = userup(tmp);
 			user.second = io.tellg();

@@ -61,7 +61,7 @@ void DeleteTool::DeleteBookIdFile(char id[avglen])
 			break;
 		}
 	}
-	
+
 	io.close();
 }
 
@@ -97,7 +97,6 @@ void DeleteTool::ClearBookName(long addr)
 	io.close();
 }
 
-// É¾³ýÄ³¸öÓÃ»§
 void DeleteTool::DeleteUser(long addr)
 {
 	fstream io(UserFile, ios::out | ios::binary);
