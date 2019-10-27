@@ -1,1 +1,2 @@
 .ipch filter=lfs diff=lfs merge=lfs -text
+LIBRARY.ipch filter=lfs diff=lfs merge=lfs -text
