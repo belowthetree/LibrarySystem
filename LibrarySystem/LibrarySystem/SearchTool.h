@@ -6,7 +6,7 @@
 #include <mutex>
 #include <algorithm>
 #include "GenerateData.h"
-
+#include "Data.h"
 using namespace std;
 
 class SearchTool
@@ -19,6 +19,8 @@ public:
 	static bool find(char s1[], char s2[]);
 	// 将content中的书本信息装入结构体并返回
 	static Book bookup(char *content);
+	// 将content中的用户信息装入结构体并返回
+	static User userup(char *content);
 	// 将s1按照offset、count切割后装入s2
 	static void split(char *s1, char *s2, int offset, int count);
 	// 判断size长度内 s1 与 s2 是否相同
@@ -26,10 +28,11 @@ public:
 
 public:
 	static int bookInfoSize;
+	static int userInfoSize;
 	// 按照书名查找
 	static std::vector<pair<Book, long>> SearchBookName(std::string name);
 	// 按照书本编号查找
-	static pair<Book, long> SearchBookId(char id[avglen]);
+	static pair<Book, BookIdIndex> SearchBookId(char id[avglen]);
 	// 按照ISBN查找
 	static pair<Book, long> SearchBookISBN(char id[avglen]);
 	// 查找某一类所有书
@@ -38,8 +41,8 @@ public:
 	// 根据学工号查询用户
 	static pair<User, long> SearchUserId(char id[]);
 
+
 public:
 	SearchTool();
 	~SearchTool();
 };
-

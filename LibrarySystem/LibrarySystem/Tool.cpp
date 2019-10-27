@@ -114,6 +114,16 @@ void bookdown(Book* it, fstream*io)
 	io->write(tmp, sizeof(float));
 }
 
+BookIdIndex bookidup(char *content)
+{
+	BookIdIndex bookid;
+	char tmp[avglen];
+	split(content, bookid.id, 0, avglen);
+	split(content, tmp, avglen, sizeof(long));
+	bookid.index = btol(tmp);
+	bookid.isBorrowed[0] = content[book_id_size - 1];
+}
+
 User userup(char *content)
 {
 	User tmp;
