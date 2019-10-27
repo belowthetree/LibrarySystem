@@ -30,14 +30,14 @@ public:
     {
         if (MyMessage->objectName().isEmpty())
             MyMessage->setObjectName(QStringLiteral("MyMessage"));
-        MyMessage->resize(1054, 660);
+        MyMessage->resize(1084, 623);
         treeWidget = new QTreeWidget(MyMessage);
         treeWidget->setObjectName(QStringLiteral("treeWidget"));
-        treeWidget->setGeometry(QRect(70, 80, 911, 311));
+        treeWidget->setGeometry(QRect(80, 90, 911, 311));
         treeWidget->header()->setDefaultSectionSize(300);
         pushButton = new QPushButton(MyMessage);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(430, 510, 112, 34));
+        pushButton->setGeometry(QRect(440, 520, 112, 34));
 
         retranslateUi(MyMessage);
 

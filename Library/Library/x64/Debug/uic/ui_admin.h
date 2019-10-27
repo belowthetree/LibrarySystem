@@ -24,7 +24,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_AdminClass
+class Ui_Admin
 {
 public:
     QTabWidget *tabWidget;
@@ -75,14 +75,14 @@ public:
     QTreeWidget *treeWidget_2;
     QPushButton *pushButton_7;
 
-    void setupUi(QWidget *AdminClass)
+    void setupUi(QWidget *Admin)
     {
-        if (AdminClass->objectName().isEmpty())
-            AdminClass->setObjectName(QStringLiteral("AdminClass"));
-        AdminClass->resize(1222, 803);
-        tabWidget = new QTabWidget(AdminClass);
+        if (Admin->objectName().isEmpty())
+            Admin->setObjectName(QStringLiteral("Admin"));
+        Admin->resize(1223, 798);
+        tabWidget = new QTabWidget(Admin);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(12, 9, 1201, 781));
+        tabWidget->setGeometry(QRect(10, 10, 1201, 781));
         QFont font;
         font.setPointSize(9);
         tabWidget->setFont(font);
@@ -244,7 +244,7 @@ public:
         tabWidget_2->addTab(tab_5, QString());
         tabWidget->addTab(tab_3, QString());
 
-        retranslateUi(AdminClass);
+        retranslateUi(Admin);
 
         tabWidget->setCurrentIndex(2);
         tabWidget_3->setCurrentIndex(2);
@@ -253,113 +253,113 @@ public:
         tabWidget_2->setCurrentIndex(0);
 
 
-        QMetaObject::connectSlotsByName(AdminClass);
+        QMetaObject::connectSlotsByName(Admin);
     } // setupUi
 
-    void retranslateUi(QWidget *AdminClass)
+    void retranslateUi(QWidget *Admin)
     {
-        AdminClass->setWindowTitle(QApplication::translate("AdminClass", "Admin", Q_NULLPTR));
+        Admin->setWindowTitle(QApplication::translate("Admin", "Admin", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem = treeWidget_11->headerItem();
-        ___qtreewidgetitem->setText(6, QApplication::translate("AdminClass", "\345\272\224\350\277\230\346\227\245\346\234\237", Q_NULLPTR));
-        ___qtreewidgetitem->setText(5, QApplication::translate("AdminClass", "\345\200\237\351\230\205\346\227\245\346\234\237", Q_NULLPTR));
-        ___qtreewidgetitem->setText(4, QApplication::translate("AdminClass", "\345\207\272\347\211\210\347\244\276", Q_NULLPTR));
-        ___qtreewidgetitem->setText(3, QApplication::translate("AdminClass", "\344\275\234\350\200\205", Q_NULLPTR));
-        ___qtreewidgetitem->setText(2, QApplication::translate("AdminClass", "\344\271\246\345\220\215", Q_NULLPTR));
-        ___qtreewidgetitem->setText(0, QApplication::translate("AdminClass", "\345\200\237\351\230\205\347\224\250\346\210\267", Q_NULLPTR));
-        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_12), QApplication::translate("AdminClass", "\345\200\237\351\230\205\346\265\201\346\260\264", Q_NULLPTR));
+        ___qtreewidgetitem->setText(6, QApplication::translate("Admin", "\345\272\224\350\277\230\346\227\245\346\234\237", Q_NULLPTR));
+        ___qtreewidgetitem->setText(5, QApplication::translate("Admin", "\345\200\237\351\230\205\346\227\245\346\234\237", Q_NULLPTR));
+        ___qtreewidgetitem->setText(4, QApplication::translate("Admin", "\345\207\272\347\211\210\347\244\276", Q_NULLPTR));
+        ___qtreewidgetitem->setText(3, QApplication::translate("Admin", "\344\275\234\350\200\205", Q_NULLPTR));
+        ___qtreewidgetitem->setText(2, QApplication::translate("Admin", "\344\271\246\345\220\215", Q_NULLPTR));
+        ___qtreewidgetitem->setText(0, QApplication::translate("Admin", "\345\200\237\351\230\205\347\224\250\346\210\267", Q_NULLPTR));
+        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_12), QApplication::translate("Admin", "\345\200\237\351\230\205\346\265\201\346\260\264", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem1 = treeWidget_12->headerItem();
-        ___qtreewidgetitem1->setText(7, QApplication::translate("AdminClass", "\350\266\205\346\234\237\346\227\266\351\227\264", Q_NULLPTR));
-        ___qtreewidgetitem1->setText(6, QApplication::translate("AdminClass", "\345\272\224\350\277\230\346\227\245\346\234\237", Q_NULLPTR));
-        ___qtreewidgetitem1->setText(5, QApplication::translate("AdminClass", "\345\200\237\351\230\205\346\227\245\346\234\237", Q_NULLPTR));
-        ___qtreewidgetitem1->setText(4, QApplication::translate("AdminClass", "\345\207\272\347\211\210\347\244\276", Q_NULLPTR));
-        ___qtreewidgetitem1->setText(3, QApplication::translate("AdminClass", "\344\275\234\350\200\205", Q_NULLPTR));
-        ___qtreewidgetitem1->setText(2, QApplication::translate("AdminClass", "\344\271\246\345\220\215", Q_NULLPTR));
-        ___qtreewidgetitem1->setText(0, QApplication::translate("AdminClass", "\345\200\237\351\230\205\347\224\250\346\210\267", Q_NULLPTR));
-        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_13), QApplication::translate("AdminClass", "\350\266\205\346\234\237\345\233\276\344\271\246", Q_NULLPTR));
-        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_6), QApplication::translate("AdminClass", "\345\233\276\344\271\246\345\200\237\351\230\205\346\227\245\345\277\227", Q_NULLPTR));
+        ___qtreewidgetitem1->setText(7, QApplication::translate("Admin", "\350\266\205\346\234\237\346\227\266\351\227\264", Q_NULLPTR));
+        ___qtreewidgetitem1->setText(6, QApplication::translate("Admin", "\345\272\224\350\277\230\346\227\245\346\234\237", Q_NULLPTR));
+        ___qtreewidgetitem1->setText(5, QApplication::translate("Admin", "\345\200\237\351\230\205\346\227\245\346\234\237", Q_NULLPTR));
+        ___qtreewidgetitem1->setText(4, QApplication::translate("Admin", "\345\207\272\347\211\210\347\244\276", Q_NULLPTR));
+        ___qtreewidgetitem1->setText(3, QApplication::translate("Admin", "\344\275\234\350\200\205", Q_NULLPTR));
+        ___qtreewidgetitem1->setText(2, QApplication::translate("Admin", "\344\271\246\345\220\215", Q_NULLPTR));
+        ___qtreewidgetitem1->setText(0, QApplication::translate("Admin", "\345\200\237\351\230\205\347\224\250\346\210\267", Q_NULLPTR));
+        tabWidget_5->setTabText(tabWidget_5->indexOf(tab_13), QApplication::translate("Admin", "\350\266\205\346\234\237\345\233\276\344\271\246", Q_NULLPTR));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_6), QApplication::translate("Admin", "\345\233\276\344\271\246\345\200\237\351\230\205\346\227\245\345\277\227", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem2 = treeWidget_13->headerItem();
-        ___qtreewidgetitem2->setText(8, QApplication::translate("AdminClass", "\344\271\246\344\273\267", Q_NULLPTR));
-        ___qtreewidgetitem2->setText(7, QApplication::translate("AdminClass", "\344\271\246\346\234\254\346\200\273\346\225\260\351\207\217", Q_NULLPTR));
-        ___qtreewidgetitem2->setText(6, QApplication::translate("AdminClass", "\345\275\223\345\211\215\345\200\237\351\230\205\346\225\260\351\207\217", Q_NULLPTR));
-        ___qtreewidgetitem2->setText(5, QApplication::translate("AdminClass", "\344\270\223\344\270\232\347\261\273\345\210\253", Q_NULLPTR));
-        ___qtreewidgetitem2->setText(4, QApplication::translate("AdminClass", "\345\207\272\347\211\210\346\227\245\346\234\237", Q_NULLPTR));
-        ___qtreewidgetitem2->setText(3, QApplication::translate("AdminClass", "\345\207\272\347\211\210\347\244\276", Q_NULLPTR));
-        ___qtreewidgetitem2->setText(2, QApplication::translate("AdminClass", "\344\275\234\350\200\205", Q_NULLPTR));
-        ___qtreewidgetitem2->setText(1, QApplication::translate("AdminClass", "\344\271\246\345\220\215", Q_NULLPTR));
+        ___qtreewidgetitem2->setText(8, QApplication::translate("Admin", "\344\271\246\344\273\267", Q_NULLPTR));
+        ___qtreewidgetitem2->setText(7, QApplication::translate("Admin", "\344\271\246\346\234\254\346\200\273\346\225\260\351\207\217", Q_NULLPTR));
+        ___qtreewidgetitem2->setText(6, QApplication::translate("Admin", "\345\275\223\345\211\215\345\200\237\351\230\205\346\225\260\351\207\217", Q_NULLPTR));
+        ___qtreewidgetitem2->setText(5, QApplication::translate("Admin", "\344\270\223\344\270\232\347\261\273\345\210\253", Q_NULLPTR));
+        ___qtreewidgetitem2->setText(4, QApplication::translate("Admin", "\345\207\272\347\211\210\346\227\245\346\234\237", Q_NULLPTR));
+        ___qtreewidgetitem2->setText(3, QApplication::translate("Admin", "\345\207\272\347\211\210\347\244\276", Q_NULLPTR));
+        ___qtreewidgetitem2->setText(2, QApplication::translate("Admin", "\344\275\234\350\200\205", Q_NULLPTR));
+        ___qtreewidgetitem2->setText(1, QApplication::translate("Admin", "\344\271\246\345\220\215", Q_NULLPTR));
         groupBox->setTitle(QString());
-        pushButton->setText(QApplication::translate("AdminClass", "\346\267\273\345\212\240", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("AdminClass", "\345\210\240\351\231\244", Q_NULLPTR));
-        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_7), QApplication::translate("AdminClass", "\345\233\276\344\271\246\345\242\236\346\267\273", Q_NULLPTR));
-        label->setText(QApplication::translate("AdminClass", "<html><head/><body><p><span style=\" font-size:10pt;\">\345\233\276\344\271\246\347\274\226\345\217\267</span></p></body></html>", Q_NULLPTR));
-        searchPushButton->setText(QApplication::translate("AdminClass", "\346\237\245\350\257\242", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("Admin", "\346\267\273\345\212\240", Q_NULLPTR));
+        pushButton_2->setText(QApplication::translate("Admin", "\345\210\240\351\231\244", Q_NULLPTR));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_7), QApplication::translate("Admin", "\345\233\276\344\271\246\345\242\236\346\267\273", Q_NULLPTR));
+        label->setText(QApplication::translate("Admin", "<html><head/><body><p><span style=\" font-size:10pt;\">\345\233\276\344\271\246\347\274\226\345\217\267</span></p></body></html>", Q_NULLPTR));
+        searchPushButton->setText(QApplication::translate("Admin", "\346\237\245\350\257\242", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem3 = treeWidget_4->headerItem();
-        ___qtreewidgetitem3->setText(4, QApplication::translate("AdminClass", "\346\230\257\345\220\246\345\217\257\345\200\237", Q_NULLPTR));
-        ___qtreewidgetitem3->setText(3, QApplication::translate("AdminClass", "\344\275\234\350\200\205", Q_NULLPTR));
-        ___qtreewidgetitem3->setText(2, QApplication::translate("AdminClass", "\344\271\246\345\220\215", Q_NULLPTR));
-        ___qtreewidgetitem3->setText(1, QApplication::translate("AdminClass", "ISBN", Q_NULLPTR));
-        ___qtreewidgetitem3->setText(0, QApplication::translate("AdminClass", "\345\233\276\344\271\246\347\274\226\345\217\267", Q_NULLPTR));
-        label_2->setText(QApplication::translate("AdminClass", "<html><head/><body><p><span style=\" font-size:10pt;\">\347\224\250\346\210\267\345\220\215(\345\255\246\345\217\267)</span></p></body></html>", Q_NULLPTR));
-        searchPushButton_2->setText(QApplication::translate("AdminClass", "\346\237\245\350\257\242", Q_NULLPTR));
+        ___qtreewidgetitem3->setText(4, QApplication::translate("Admin", "\346\230\257\345\220\246\345\217\257\345\200\237", Q_NULLPTR));
+        ___qtreewidgetitem3->setText(3, QApplication::translate("Admin", "\344\275\234\350\200\205", Q_NULLPTR));
+        ___qtreewidgetitem3->setText(2, QApplication::translate("Admin", "\344\271\246\345\220\215", Q_NULLPTR));
+        ___qtreewidgetitem3->setText(1, QApplication::translate("Admin", "ISBN", Q_NULLPTR));
+        ___qtreewidgetitem3->setText(0, QApplication::translate("Admin", "\345\233\276\344\271\246\347\274\226\345\217\267", Q_NULLPTR));
+        label_2->setText(QApplication::translate("Admin", "<html><head/><body><p><span style=\" font-size:10pt;\">\347\224\250\346\210\267\345\220\215(\345\255\246\345\217\267)</span></p></body></html>", Q_NULLPTR));
+        searchPushButton_2->setText(QApplication::translate("Admin", "\346\237\245\350\257\242", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem4 = treeWidget_5->headerItem();
-        ___qtreewidgetitem4->setText(2, QApplication::translate("AdminClass", "\344\270\223\344\270\232", Q_NULLPTR));
-        ___qtreewidgetitem4->setText(1, QApplication::translate("AdminClass", "\345\255\246\345\217\267", Q_NULLPTR));
-        ___qtreewidgetitem4->setText(0, QApplication::translate("AdminClass", "\345\247\223\345\220\215", Q_NULLPTR));
-        pushButton_3->setText(QApplication::translate("AdminClass", "\345\200\237\351\230\205", Q_NULLPTR));
-        tabWidget_6->setTabText(tabWidget_6->indexOf(tab_15), QApplication::translate("AdminClass", "\345\200\237\351\230\205", Q_NULLPTR));
-        label_3->setText(QApplication::translate("AdminClass", "<html><head/><body><p><span style=\" font-size:10pt;\">\344\271\246\345\220\215</span></p></body></html>", Q_NULLPTR));
-        label_4->setText(QApplication::translate("AdminClass", "<html><head/><body><p><span style=\" font-size:10pt;\">\345\200\237\351\230\205\344\272\272\344\277\241\346\201\257</span></p></body></html>", Q_NULLPTR));
-        pushButton_4->setText(QApplication::translate("AdminClass", "\346\237\245\350\257\242", Q_NULLPTR));
+        ___qtreewidgetitem4->setText(2, QApplication::translate("Admin", "\344\270\223\344\270\232", Q_NULLPTR));
+        ___qtreewidgetitem4->setText(1, QApplication::translate("Admin", "\345\255\246\345\217\267", Q_NULLPTR));
+        ___qtreewidgetitem4->setText(0, QApplication::translate("Admin", "\345\247\223\345\220\215", Q_NULLPTR));
+        pushButton_3->setText(QApplication::translate("Admin", "\345\200\237\351\230\205", Q_NULLPTR));
+        tabWidget_6->setTabText(tabWidget_6->indexOf(tab_15), QApplication::translate("Admin", "\345\200\237\351\230\205", Q_NULLPTR));
+        label_3->setText(QApplication::translate("Admin", "<html><head/><body><p><span style=\" font-size:10pt;\">\344\271\246\345\220\215</span></p></body></html>", Q_NULLPTR));
+        label_4->setText(QApplication::translate("Admin", "<html><head/><body><p><span style=\" font-size:10pt;\">\345\200\237\351\230\205\344\272\272\344\277\241\346\201\257</span></p></body></html>", Q_NULLPTR));
+        pushButton_4->setText(QApplication::translate("Admin", "\346\237\245\350\257\242", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem5 = treeWidget_6->headerItem();
-        ___qtreewidgetitem5->setText(5, QApplication::translate("AdminClass", "\346\230\257\345\220\246\350\266\205\346\234\237", Q_NULLPTR));
-        ___qtreewidgetitem5->setText(4, QApplication::translate("AdminClass", "\346\230\257\345\220\246\345\217\257\345\200\237", Q_NULLPTR));
-        ___qtreewidgetitem5->setText(3, QApplication::translate("AdminClass", "\345\200\237\351\230\205\346\227\245\346\234\237", Q_NULLPTR));
-        ___qtreewidgetitem5->setText(2, QApplication::translate("AdminClass", "\344\271\246\345\220\215", Q_NULLPTR));
-        ___qtreewidgetitem5->setText(1, QApplication::translate("AdminClass", "ISBN", Q_NULLPTR));
-        ___qtreewidgetitem5->setText(0, QApplication::translate("AdminClass", "\345\233\276\344\271\246\347\274\226\345\217\267", Q_NULLPTR));
+        ___qtreewidgetitem5->setText(5, QApplication::translate("Admin", "\346\230\257\345\220\246\350\266\205\346\234\237", Q_NULLPTR));
+        ___qtreewidgetitem5->setText(4, QApplication::translate("Admin", "\346\230\257\345\220\246\345\217\257\345\200\237", Q_NULLPTR));
+        ___qtreewidgetitem5->setText(3, QApplication::translate("Admin", "\345\200\237\351\230\205\346\227\245\346\234\237", Q_NULLPTR));
+        ___qtreewidgetitem5->setText(2, QApplication::translate("Admin", "\344\271\246\345\220\215", Q_NULLPTR));
+        ___qtreewidgetitem5->setText(1, QApplication::translate("Admin", "ISBN", Q_NULLPTR));
+        ___qtreewidgetitem5->setText(0, QApplication::translate("Admin", "\345\233\276\344\271\246\347\274\226\345\217\267", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem6 = treeWidget_7->headerItem();
-        ___qtreewidgetitem6->setText(2, QApplication::translate("AdminClass", "\344\270\223\344\270\232", Q_NULLPTR));
-        ___qtreewidgetitem6->setText(1, QApplication::translate("AdminClass", "\345\255\246\345\217\267", Q_NULLPTR));
-        ___qtreewidgetitem6->setText(0, QApplication::translate("AdminClass", "\345\247\223\345\220\215", Q_NULLPTR));
-        pushButton_8->setText(QApplication::translate("AdminClass", "\345\275\222\350\277\230", Q_NULLPTR));
-        tabWidget_6->setTabText(tabWidget_6->indexOf(tab_14), QApplication::translate("AdminClass", "\345\275\222\350\277\230", Q_NULLPTR));
-        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_8), QApplication::translate("AdminClass", "\344\271\246\347\261\215\345\200\237\351\230\205", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("AdminClass", "\345\233\276\344\271\246\347\256\241\347\220\206", Q_NULLPTR));
+        ___qtreewidgetitem6->setText(2, QApplication::translate("Admin", "\344\270\223\344\270\232", Q_NULLPTR));
+        ___qtreewidgetitem6->setText(1, QApplication::translate("Admin", "\345\255\246\345\217\267", Q_NULLPTR));
+        ___qtreewidgetitem6->setText(0, QApplication::translate("Admin", "\345\247\223\345\220\215", Q_NULLPTR));
+        pushButton_8->setText(QApplication::translate("Admin", "\345\275\222\350\277\230", Q_NULLPTR));
+        tabWidget_6->setTabText(tabWidget_6->indexOf(tab_14), QApplication::translate("Admin", "\345\275\222\350\277\230", Q_NULLPTR));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_8), QApplication::translate("Admin", "\344\271\246\347\261\215\345\200\237\351\230\205", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("Admin", "\345\233\276\344\271\246\347\256\241\347\220\206", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem7 = treeWidget->headerItem();
-        ___qtreewidgetitem7->setText(8, QApplication::translate("AdminClass", "\345\257\206\347\240\201", Q_NULLPTR));
-        ___qtreewidgetitem7->setText(7, QApplication::translate("AdminClass", "\345\271\264\351\276\204", Q_NULLPTR));
-        ___qtreewidgetitem7->setText(6, QApplication::translate("AdminClass", "\346\200\247\345\210\253", Q_NULLPTR));
-        ___qtreewidgetitem7->setText(5, QApplication::translate("AdminClass", "\351\202\256\347\256\261", Q_NULLPTR));
-        ___qtreewidgetitem7->setText(4, QApplication::translate("AdminClass", "\346\211\213\346\234\272\345\217\267", Q_NULLPTR));
-        ___qtreewidgetitem7->setText(3, QApplication::translate("AdminClass", "\345\271\264\347\272\247\347\217\255\347\272\247", Q_NULLPTR));
-        ___qtreewidgetitem7->setText(2, QApplication::translate("AdminClass", "\344\270\223\344\270\232", Q_NULLPTR));
-        ___qtreewidgetitem7->setText(1, QApplication::translate("AdminClass", "\345\247\223\345\220\215", Q_NULLPTR));
-        ___qtreewidgetitem7->setText(0, QApplication::translate("AdminClass", "\345\255\246\345\217\267", Q_NULLPTR));
-        pushButton_11->setText(QApplication::translate("AdminClass", "\344\277\256\346\224\271\345\257\206\347\240\201", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("AdminClass", "\347\224\250\346\210\267\347\256\241\347\220\206", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(8, QApplication::translate("Admin", "\345\257\206\347\240\201", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(7, QApplication::translate("Admin", "\345\271\264\351\276\204", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(6, QApplication::translate("Admin", "\346\200\247\345\210\253", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(5, QApplication::translate("Admin", "\351\202\256\347\256\261", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(4, QApplication::translate("Admin", "\346\211\213\346\234\272\345\217\267", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(3, QApplication::translate("Admin", "\345\271\264\347\272\247\347\217\255\347\272\247", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(2, QApplication::translate("Admin", "\344\270\223\344\270\232", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(1, QApplication::translate("Admin", "\345\247\223\345\220\215", Q_NULLPTR));
+        ___qtreewidgetitem7->setText(0, QApplication::translate("Admin", "\345\255\246\345\217\267", Q_NULLPTR));
+        pushButton_11->setText(QApplication::translate("Admin", "\344\277\256\346\224\271\345\257\206\347\240\201", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("Admin", "\347\224\250\346\210\267\347\256\241\347\220\206", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem8 = treeWidget_3->headerItem();
-        ___qtreewidgetitem8->setText(3, QApplication::translate("AdminClass", "\345\217\221\345\270\203\346\227\266\351\227\264", Q_NULLPTR));
-        ___qtreewidgetitem8->setText(2, QApplication::translate("AdminClass", "\345\206\205\345\256\271", Q_NULLPTR));
-        ___qtreewidgetitem8->setText(1, QApplication::translate("AdminClass", "\346\240\207\351\242\230", Q_NULLPTR));
-        ___qtreewidgetitem8->setText(0, QApplication::translate("AdminClass", "\347\274\226\345\217\267", Q_NULLPTR));
+        ___qtreewidgetitem8->setText(3, QApplication::translate("Admin", "\345\217\221\345\270\203\346\227\266\351\227\264", Q_NULLPTR));
+        ___qtreewidgetitem8->setText(2, QApplication::translate("Admin", "\345\206\205\345\256\271", Q_NULLPTR));
+        ___qtreewidgetitem8->setText(1, QApplication::translate("Admin", "\346\240\207\351\242\230", Q_NULLPTR));
+        ___qtreewidgetitem8->setText(0, QApplication::translate("Admin", "\347\274\226\345\217\267", Q_NULLPTR));
         groupBox_2->setTitle(QString());
-        pushButton_5->setText(QApplication::translate("AdminClass", "\346\267\273\345\212\240", Q_NULLPTR));
-        pushButton_6->setText(QApplication::translate("AdminClass", "\344\277\256\346\224\271", Q_NULLPTR));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QApplication::translate("AdminClass", "\345\205\254\345\221\212\347\256\241\347\220\206", Q_NULLPTR));
+        pushButton_5->setText(QApplication::translate("Admin", "\346\267\273\345\212\240", Q_NULLPTR));
+        pushButton_6->setText(QApplication::translate("Admin", "\344\277\256\346\224\271", Q_NULLPTR));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QApplication::translate("Admin", "\345\205\254\345\221\212\347\256\241\347\220\206", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem9 = treeWidget_2->headerItem();
-        ___qtreewidgetitem9->setText(4, QApplication::translate("AdminClass", "\347\225\231\350\250\200\346\227\266\351\227\264", Q_NULLPTR));
-        ___qtreewidgetitem9->setText(3, QApplication::translate("AdminClass", "\347\225\231\350\250\200", Q_NULLPTR));
-        ___qtreewidgetitem9->setText(2, QApplication::translate("AdminClass", "\345\255\246\345\217\267", Q_NULLPTR));
-        ___qtreewidgetitem9->setText(1, QApplication::translate("AdminClass", "\345\247\223\345\220\215", Q_NULLPTR));
-        ___qtreewidgetitem9->setText(0, QApplication::translate("AdminClass", "\347\225\231\350\250\200\347\274\226\345\217\267", Q_NULLPTR));
-        pushButton_7->setText(QApplication::translate("AdminClass", "\345\210\240\351\231\244", Q_NULLPTR));
-        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_5), QApplication::translate("AdminClass", "\347\225\231\350\250\200\346\235\277\347\256\241\347\220\206", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("AdminClass", "\344\272\244\346\265\201\345\271\263\345\217\260\347\256\241\347\220\206", Q_NULLPTR));
+        ___qtreewidgetitem9->setText(4, QApplication::translate("Admin", "\347\225\231\350\250\200\346\227\266\351\227\264", Q_NULLPTR));
+        ___qtreewidgetitem9->setText(3, QApplication::translate("Admin", "\347\225\231\350\250\200", Q_NULLPTR));
+        ___qtreewidgetitem9->setText(2, QApplication::translate("Admin", "\345\255\246\345\217\267", Q_NULLPTR));
+        ___qtreewidgetitem9->setText(1, QApplication::translate("Admin", "\345\247\223\345\220\215", Q_NULLPTR));
+        ___qtreewidgetitem9->setText(0, QApplication::translate("Admin", "\347\225\231\350\250\200\347\274\226\345\217\267", Q_NULLPTR));
+        pushButton_7->setText(QApplication::translate("Admin", "\345\210\240\351\231\244", Q_NULLPTR));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_5), QApplication::translate("Admin", "\347\225\231\350\250\200\346\235\277\347\256\241\347\220\206", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("Admin", "\344\272\244\346\265\201\345\271\263\345\217\260\347\256\241\347\220\206", Q_NULLPTR));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class AdminClass: public Ui_AdminClass {};
+    class Admin: public Ui_Admin {};
 } // namespace Ui
 
 QT_END_NAMESPACE

@@ -1,10 +1,11 @@
-#include"login.h"
+#include "Login.h"
 
-Login::Login(QWidget *parent) :QWidget(parent) {
-	this->setParent(parent);
-
-	//connect(bt, &QPushButton::clicked, this, &Login::sendSlot);
-
-	
+Login::Login(QWidget *parent)
+	: QWidget(parent)
+{
+	ui.setupUi(this);
 }
 
+Login::~Login()
+{
+}

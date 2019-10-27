@@ -6,62 +6,78 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
+$SG142271 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG142272 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG142273 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG144201 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG144202 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG144203 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG144496 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG144497 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG144498 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG144791 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG144792 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG144793 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG145568 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG145569 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG145570 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG145863 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG145864 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG145865 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG146158 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG146159 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG146160 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
 ?qt_meta_stringdata_Login@@3Uqt_meta_stringdata_Login_t@@B DD 0ffffffffH ; qt_meta_stringdata_Login
 	DD	05H
 	DD	00H
 	ORG $+4
-	DQ	0000000000000060H
-	DD	0ffffffffH
-	DD	08H
-	DD	00H
-	ORG $+4
-	DQ	000000000000004eH
-	DD	0ffffffffH
-	DD	00H
-	DD	00H
-	ORG $+4
-	DQ	000000000000003fH
-	DD	0ffffffffH
-	DD	0cH
-	DD	00H
-	ORG $+4
-	DQ	0000000000000028H
+	DQ	0000000000000018H
 	DB	04cH
 	DB	06fH
 	DB	067H
 	DB	069H
 	DB	06eH
 	DB	00H
-	DB	06dH
-	DB	079H
-	DB	053H
-	DB	069H
-	DB	067H
-	DB	06eH
-	DB	061H
-	DB	06cH
-	DB	00H
-	DB	00H
-	DB	06dH
-	DB	079H
-	DB	053H
-	DB	069H
-	DB	067H
-	DB	06eH
-	DB	061H
-	DB	06cH
-	DB	050H
-	DB	061H
-	DB	072H
-	DB	06dH
-	DB	00H
-	ORG $+3
+	ORG $+2
 ?qt_meta_data_Login@@3QBIB DD 07H			; qt_meta_data_Login
 	DD	00H
 	DD	00H
 	DD	00H
-	DD	02H
-	DD	0eH
 	DD	00H
 	DD	00H
 	DD	00H
@@ -69,48 +85,10 @@ CONST	SEGMENT
 	DD	00H
 	DD	00H
 	DD	00H
-	DD	02H
-	DD	01H
 	DD	00H
-	DD	018H
-	DD	02H
-	DD	06H
-	DD	03H
-	DD	02H
-	DD	019H
-	DD	02H
-	DD	06H
-	DD	02bH
-	DD	02bH
-	DD	02H
-	DD	0aH
-	DD	02H
-	DD	02H
 	DD	00H
-	ORG $+4
-$SG125592 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
-	DB	00H
-	ORG $+7
-$SG125593 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG125594 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG125887 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
-	DB	00H
-	ORG $+7
-$SG125888 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG125889 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG126182 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
-	DB	00H
-	ORG $+7
-$SG126183 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG126184 DB	'qRegisterNormalizedMetaType', 00H
+	DD	00H
+	DD	00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
@@ -119,20 +97,12 @@ PUBLIC	?metaObject@Login@@UEBAPEBUQMetaObject@@XZ	; Login::metaObject
 PUBLIC	?qt_metacast@Login@@UEAAPEAXPEBD@Z		; Login::qt_metacast
 PUBLIC	?qt_metacall@Login@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ; Login::qt_metacall
 PUBLIC	?qt_static_metacall@Login@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; Login::qt_static_metacall
-PUBLIC	?mySignal@Login@@QEAAXXZ			; Login::mySignal
-PUBLIC	?mySignalParm@Login@@QEAAXHVQString@@@Z		; Login::mySignalParm
 PUBLIC	?staticMetaObject@Login@@2UQMetaObject@@B	; Login::staticMetaObject
 EXTRN	strcmp:PROC
-EXTRN	__imp_?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z:PROC
-EXTRN	__imp_??0QString@@QEAA@AEBV0@@Z:PROC
-EXTRN	__imp_??1QString@@QEAA@XZ:PROC
 EXTRN	__imp_?dynamicMetaObject@QObjectData@@QEBAPEAUQMetaObject@@XZ:PROC
 EXTRN	__imp_?qt_metacast@QWidget@@UEAAPEAXPEBD@Z:PROC
 EXTRN	__imp_?qt_metacall@QWidget@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z:PROC
-EXTRN	__GSHandlerCheck_EH:PROC
-EXTRN	__security_check_cookie:PROC
 EXTRN	__imp_?staticMetaObject@QWidget@@2UQMetaObject@@B:BYTE
-EXTRN	__security_cookie:QWORD
 _BSS	SEGMENT
 ?staticMetaObject@Login@@2UQMetaObject@@B DB 030H DUP (?) ; Login::staticMetaObject
 _BSS	ENDS
@@ -143,40 +113,13 @@ $pdata$?metaObject@Login@@UEBAPEBUQMetaObject@@XZ DD imagerel $LN5
 $pdata$?qt_metacast@Login@@UEAAPEAXPEBD@Z DD imagerel $LN5
 	DD	imagerel $LN5+75
 	DD	imagerel $unwind$?qt_metacast@Login@@UEAAPEAXPEBD@Z
-$pdata$?qt_metacall@Login@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z DD imagerel $LN9
-	DD	imagerel $LN9+174
+$pdata$?qt_metacall@Login@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z DD imagerel $LN3
+	DD	imagerel $LN3+61
 	DD	imagerel $unwind$?qt_metacall@Login@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
-$pdata$?qt_static_metacall@Login@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z DD imagerel $LN20
-	DD	imagerel $LN20+450
-	DD	imagerel $unwind$?qt_static_metacall@Login@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z
-$pdata$?mySignal@Login@@QEAAXXZ DD imagerel $LN3
-	DD	imagerel $LN3+38
-	DD	imagerel $unwind$?mySignal@Login@@QEAAXXZ
-$pdata$?mySignalParm@Login@@QEAAXHVQString@@@Z DD imagerel $LN4
-	DD	imagerel $LN4+130
-	DD	imagerel $unwind$?mySignalParm@Login@@QEAAXHVQString@@@Z
-pdata	ENDS
-pdata	SEGMENT
-$pdata$?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA DD imagerel ?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA
-	DD	imagerel ?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA+25
-	DD	imagerel $unwind$?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA
 pdata	ENDS
 CRT$XCU	SEGMENT
 ??staticMetaObject$initializer$@Login@@2P6AXXZEA@@3P6AXXZEA DQ FLAT:??__E?staticMetaObject@Login@@2UQMetaObject@@B@@YAXXZ ; ??staticMetaObject$initializer$@Login@@2P6AXXZEA@@3P6AXXZEA
 CRT$XCU	ENDS
-CONST	SEGMENT
-	ORG $+4
-$cppxdata$?mySignalParm@Login@@QEAAXHVQString@@@Z DD 019930522H
-	DD	01H
-	DD	imagerel $stateUnwindMap$?mySignalParm@Login@@QEAAXHVQString@@@Z
-	DD	00H
-	DD	00H
-	DD	03H
-	DD	imagerel $ip2state$?mySignalParm@Login@@QEAAXHVQString@@@Z
-	DD	020H
-	DD	00H
-	DD	01H
-CONST	ENDS
 xdata	SEGMENT
 $unwind$?metaObject@Login@@UEBAPEBUQMetaObject@@XZ DD 010901H
 	DD	06209H
@@ -184,37 +127,18 @@ $unwind$?qt_metacast@Login@@UEAAPEAXPEBD@Z DD 010e01H
 	DD	0420eH
 $unwind$?qt_metacall@Login@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z DD 011701H
 	DD	04217H
-$unwind$?qt_static_metacall@Login@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z DD 021a01H
-	DD	011011aH
-$unwind$?mySignal@Login@@QEAAXXZ DD 010901H
-	DD	04209H
-$unwind$?mySignalParm@Login@@QEAAXHVQString@@@Z DD 012a19H
-	DD	0a212H
-	DD	imagerel __GSHandlerCheck_EH
-	DD	imagerel $cppxdata$?mySignalParm@Login@@QEAAXHVQString@@@Z
-	DD	042H
-$stateUnwindMap$?mySignalParm@Login@@QEAAXHVQString@@@Z DD 0ffffffffH
-	DD	imagerel ?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA
-$ip2state$?mySignalParm@Login@@QEAAXHVQString@@@Z DD imagerel ?mySignalParm@Login@@QEAAXHVQString@@@Z
-	DD	0ffffffffH
-	DD	imagerel ?mySignalParm@Login@@QEAAXHVQString@@@Z+42
-	DD	00H
-	DD	imagerel ?mySignalParm@Login@@QEAAXHVQString@@@Z+101
-	DD	0ffffffffH
-$unwind$?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA DD 020601H
-	DD	050023206H
 xdata	ENDS
 ; Function compile flags: /Odtp
 ;	COMDAT ??__E?staticMetaObject@Login@@2UQMetaObject@@B@@YAXXZ
 text$di	SEGMENT
 ??__E?staticMetaObject@Login@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'Login::staticMetaObject'', COMDAT
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 99
+; File f:\computer\software\library\library\x64\debug\moc\moc_login.cpp
+; Line 66
 	mov	rax, QWORD PTR __imp_?staticMetaObject@QWidget@@2UQMetaObject@@B
 	mov	QWORD PTR ?staticMetaObject@Login@@2UQMetaObject@@B, rax
 	lea	rax, OFFSET FLAT:?qt_meta_stringdata_Login@@3Uqt_meta_stringdata_Login_t@@B
 	mov	QWORD PTR ?staticMetaObject@Login@@2UQMetaObject@@B+8, rax
-; Line 100
+; Line 67
 	lea	rax, OFFSET FLAT:?qt_meta_data_Login@@3QBIB
 	mov	QWORD PTR ?staticMetaObject@Login@@2UQMetaObject@@B+16, rax
 	lea	rax, OFFSET FLAT:?qt_static_metacall@Login@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; Login::qt_static_metacall
@@ -226,244 +150,18 @@ text$di	SEGMENT
 text$di	ENDS
 ; Function compile flags: /Odtp
 _TEXT	SEGMENT
-$T1 = 32
-_a$ = 40
-__$ArrayPad$ = 64
-this$ = 96
-_t1$ = 104
-_t2$ = 112
-?mySignalParm@Login@@QEAAXHVQString@@@Z PROC		; Login::mySignalParm
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 142
-$LN4:
-	mov	QWORD PTR [rsp+24], r8
-	mov	DWORD PTR [rsp+16], edx
-	mov	QWORD PTR [rsp+8], rcx
-	sub	rsp, 88					; 00000058H
-	mov	QWORD PTR $T1[rsp], -2
-	mov	rax, QWORD PTR __security_cookie
-	xor	rax, rsp
-	mov	QWORD PTR __$ArrayPad$[rsp], rax
-; Line 143
-	mov	QWORD PTR _a$[rsp], 0
-	lea	rax, QWORD PTR _t1$[rsp]
-	mov	QWORD PTR _a$[rsp+8], rax
-	mov	rax, QWORD PTR _t2$[rsp]
-	mov	QWORD PTR _a$[rsp+16], rax
-; Line 144
-	lea	r9, QWORD PTR _a$[rsp]
-	mov	r8d, 1
-	lea	rdx, OFFSET FLAT:?staticMetaObject@Login@@2UQMetaObject@@B ; Login::staticMetaObject
-	mov	rcx, QWORD PTR this$[rsp]
-	call	QWORD PTR __imp_?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z
-	npad	1
-; Line 145
-	mov	rcx, QWORD PTR _t2$[rsp]
-	call	QWORD PTR __imp_??1QString@@QEAA@XZ
-	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
-	xor	rcx, rsp
-	call	__security_check_cookie
-	add	rsp, 88					; 00000058H
-	ret	0
-?mySignalParm@Login@@QEAAXHVQString@@@Z ENDP		; Login::mySignalParm
-_TEXT	ENDS
-text$x	SEGMENT
-$T1 = 32
-_a$ = 40
-__$ArrayPad$ = 64
-this$ = 96
-_t1$ = 104
-_t2$ = 112
-?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA PROC ; `Login::mySignalParm'::`1'::dtor$0
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	rcx, QWORD PTR _t2$[rbp]
-	call	QWORD PTR __imp_??1QString@@QEAA@XZ
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA ENDP ; `Login::mySignalParm'::`1'::dtor$0
-text$x	ENDS
-; Function compile flags: /Odtp
-text$x	SEGMENT
-$T1 = 32
-_a$ = 40
-__$ArrayPad$ = 64
-this$ = 96
-_t1$ = 104
-_t2$ = 112
-?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA PROC ; `Login::mySignalParm'::`1'::dtor$0
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	rcx, QWORD PTR _t2$[rbp]
-	call	QWORD PTR __imp_??1QString@@QEAA@XZ
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$0@?0??mySignalParm@Login@@QEAAXHVQString@@@Z@4HA ENDP ; `Login::mySignalParm'::`1'::dtor$0
-text$x	ENDS
-; Function compile flags: /Odtp
-_TEXT	SEGMENT
-this$ = 48
-?mySignal@Login@@QEAAXXZ PROC				; Login::mySignal
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 136
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	sub	rsp, 40					; 00000028H
-; Line 137
-	xor	r9d, r9d
-	xor	r8d, r8d
-	lea	rdx, OFFSET FLAT:?staticMetaObject@Login@@2UQMetaObject@@B ; Login::staticMetaObject
-	mov	rcx, QWORD PTR this$[rsp]
-	call	QWORD PTR __imp_?activate@QMetaObject@@SAXPEAVQObject@@PEBU1@HPEAPEAX@Z
-; Line 138
-	add	rsp, 40					; 00000028H
-	ret	0
-?mySignal@Login@@QEAAXXZ ENDP				; Login::mySignal
-_TEXT	ENDS
-; Function compile flags: /Odtp
-_TEXT	SEGMENT
-func$1 = 32
-tv69 = 40
-tv132 = 44
-tv140 = 48
-_t$2 = 56
-result$3 = 64
-$T4 = 72
-tv143 = 80
-$T5 = 88
-$T6 = 104
-$T7 = 120
-_o$ = 144
-_c$ = 152
-_id$ = 160
-_a$ = 168
+_o$ = 8
+_c$ = 16
+_id$ = 24
+_a$ = 32
 ?qt_static_metacall@Login@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; Login::qt_static_metacall
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 69
-$LN20:
+; File f:\computer\software\library\library\x64\debug\moc\moc_login.cpp
+; Line 58
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
-	sub	rsp, 136				; 00000088H
-; Line 70
-	cmp	DWORD PTR _c$[rsp], 0
-	jne	$LN4@qt_static_
-; Line 71
-	mov	rax, QWORD PTR _o$[rsp]
-	mov	QWORD PTR _t$2[rsp], rax
-; Line 73
-	mov	eax, DWORD PTR _id$[rsp]
-	mov	DWORD PTR tv69[rsp], eax
-	cmp	DWORD PTR tv69[rsp], 0
-	je	SHORT $LN6@qt_static_
-	cmp	DWORD PTR tv69[rsp], 1
-	je	SHORT $LN7@qt_static_
-	jmp	SHORT $LN2@qt_static_
-$LN6@qt_static_:
-; Line 74
-	mov	rcx, QWORD PTR _t$2[rsp]
-	call	?mySignal@Login@@QEAAXXZ		; Login::mySignal
-	jmp	SHORT $LN2@qt_static_
-$LN7@qt_static_:
-; Line 75
-	lea	rax, QWORD PTR $T7[rsp]
-	mov	QWORD PTR $T4[rsp], rax
-	mov	eax, 8
-	imul	rax, rax, 2
-	mov	rcx, QWORD PTR _a$[rsp]
-	mov	rdx, QWORD PTR [rcx+rax]
-	mov	rcx, QWORD PTR $T4[rsp]
-	call	QWORD PTR __imp_??0QString@@QEAA@AEBV0@@Z
-	mov	QWORD PTR tv143[rsp], rax
-	mov	eax, 8
-	imul	rax, rax, 1
-	mov	rcx, QWORD PTR _a$[rsp]
-	mov	rax, QWORD PTR [rcx+rax]
-	mov	r8, QWORD PTR tv143[rsp]
-	mov	edx, DWORD PTR [rax]
-	mov	rcx, QWORD PTR _t$2[rsp]
-	call	?mySignalParm@Login@@QEAAXHVQString@@@Z	; Login::mySignalParm
-$LN2@qt_static_:
-; Line 78
-	jmp	$LN1@qt_static_
-$LN4@qt_static_:
-	cmp	DWORD PTR _c$[rsp], 10
-	jne	$LN1@qt_static_
-; Line 79
-	mov	eax, 8
-	imul	rax, rax, 0
-	mov	rcx, QWORD PTR _a$[rsp]
-	mov	rax, QWORD PTR [rcx+rax]
-	mov	QWORD PTR result$3[rsp], rax
-; Line 80
-	mov	eax, 8
-	imul	rax, rax, 1
-	mov	rcx, QWORD PTR _a$[rsp]
-	mov	rax, QWORD PTR [rcx+rax]
-	mov	QWORD PTR func$1[rsp], rax
-; Line 83
-	lea	rax, OFFSET FLAT:?mySignal@Login@@QEAAXXZ ; Login::mySignal
-	mov	QWORD PTR $T5[rsp], rax
-	mov	DWORD PTR $T5[rsp+8], 0
-	mov	rax, QWORD PTR func$1[rsp]
-	mov	rcx, QWORD PTR $T5[rsp]
-	cmp	QWORD PTR [rax], rcx
-	jne	SHORT $LN14@qt_static_
-	mov	rax, QWORD PTR func$1[rsp]
-	cmp	QWORD PTR [rax], 0
-	je	SHORT $LN13@qt_static_
-	mov	rax, QWORD PTR func$1[rsp]
-	mov	ecx, DWORD PTR $T5[rsp+8]
-	cmp	DWORD PTR [rax+8], ecx
-	jne	SHORT $LN14@qt_static_
-$LN13@qt_static_:
-	mov	DWORD PTR tv132[rsp], 1
-	jmp	SHORT $LN15@qt_static_
-$LN14@qt_static_:
-	mov	DWORD PTR tv132[rsp], 0
-$LN15@qt_static_:
-	cmp	DWORD PTR tv132[rsp], 0
-	je	SHORT $LN10@qt_static_
-; Line 84
-	mov	rax, QWORD PTR result$3[rsp]
-	mov	DWORD PTR [rax], 0
-; Line 85
-	jmp	SHORT $LN1@qt_static_
-$LN10@qt_static_:
-; Line 90
-	lea	rax, OFFSET FLAT:?mySignalParm@Login@@QEAAXHVQString@@@Z ; Login::mySignalParm
-	mov	QWORD PTR $T6[rsp], rax
-	mov	DWORD PTR $T6[rsp+8], 0
-	mov	rax, QWORD PTR func$1[rsp]
-	mov	rcx, QWORD PTR $T6[rsp]
-	cmp	QWORD PTR [rax], rcx
-	jne	SHORT $LN17@qt_static_
-	mov	rax, QWORD PTR func$1[rsp]
-	cmp	QWORD PTR [rax], 0
-	je	SHORT $LN16@qt_static_
-	mov	rax, QWORD PTR func$1[rsp]
-	mov	ecx, DWORD PTR $T6[rsp+8]
-	cmp	DWORD PTR [rax+8], ecx
-	jne	SHORT $LN17@qt_static_
-$LN16@qt_static_:
-	mov	DWORD PTR tv140[rsp], 1
-	jmp	SHORT $LN18@qt_static_
-$LN17@qt_static_:
-	mov	DWORD PTR tv140[rsp], 0
-$LN18@qt_static_:
-	cmp	DWORD PTR tv140[rsp], 0
-	je	SHORT $LN1@qt_static_
-; Line 91
-	mov	rax, QWORD PTR result$3[rsp]
-	mov	DWORD PTR [rax], 1
-$LN1@qt_static_:
-; Line 96
-	add	rsp, 136				; 00000088H
+; Line 63
 	ret	0
 ?qt_static_metacall@Login@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ENDP ; Login::qt_static_metacall
 _TEXT	ENDS
@@ -474,70 +172,24 @@ _c$ = 56
 _id$ = 64
 _a$ = 72
 ?qt_metacall@Login@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; Login::qt_metacall
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 118
-$LN9:
+; File f:\computer\software\library\library\x64\debug\moc\moc_login.cpp
+; Line 85
+$LN3:
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
 	mov	DWORD PTR [rsp+16], edx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 119
+; Line 86
 	mov	r9, QWORD PTR _a$[rsp]
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacall@QWidget@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 	mov	DWORD PTR _id$[rsp], eax
-; Line 120
-	cmp	DWORD PTR _id$[rsp], 0
-	jge	SHORT $LN2@qt_metacal
-; Line 121
+; Line 87
 	mov	eax, DWORD PTR _id$[rsp]
-	jmp	SHORT $LN1@qt_metacal
-$LN2@qt_metacal:
-; Line 122
-	cmp	DWORD PTR _c$[rsp], 0
-	jne	SHORT $LN3@qt_metacal
-; Line 123
-	cmp	DWORD PTR _id$[rsp], 2
-	jge	SHORT $LN5@qt_metacal
-; Line 124
-	mov	r9, QWORD PTR _a$[rsp]
-	mov	r8d, DWORD PTR _id$[rsp]
-	mov	edx, DWORD PTR _c$[rsp]
-	mov	rcx, QWORD PTR this$[rsp]
-	call	?qt_static_metacall@Login@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z ; Login::qt_static_metacall
-$LN5@qt_metacal:
-; Line 125
-	mov	eax, DWORD PTR _id$[rsp]
-	sub	eax, 2
-	mov	DWORD PTR _id$[rsp], eax
-	jmp	SHORT $LN4@qt_metacal
-$LN3@qt_metacal:
-; Line 126
-	cmp	DWORD PTR _c$[rsp], 12
-	jne	SHORT $LN6@qt_metacal
-; Line 127
-	cmp	DWORD PTR _id$[rsp], 2
-	jge	SHORT $LN7@qt_metacal
-; Line 128
-	mov	eax, 8
-	imul	rax, rax, 0
-	mov	rcx, QWORD PTR _a$[rsp]
-	mov	rax, QWORD PTR [rcx+rax]
-	mov	DWORD PTR [rax], -1
-$LN7@qt_metacal:
-; Line 129
-	mov	eax, DWORD PTR _id$[rsp]
-	sub	eax, 2
-	mov	DWORD PTR _id$[rsp], eax
-$LN6@qt_metacal:
-$LN4@qt_metacal:
-; Line 131
-	mov	eax, DWORD PTR _id$[rsp]
-$LN1@qt_metacal:
-; Line 132
+; Line 88
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacall@Login@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z ENDP ; Login::qt_metacall
@@ -547,34 +199,34 @@ _TEXT	SEGMENT
 this$ = 48
 _clname$ = 56
 ?qt_metacast@Login@@UEAAPEAXPEBD@Z PROC			; Login::qt_metacast
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 110
+; File f:\computer\software\library\library\x64\debug\moc\moc_login.cpp
+; Line 77
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 40					; 00000028H
-; Line 111
+; Line 78
 	cmp	QWORD PTR _clname$[rsp], 0
 	jne	SHORT $LN2@qt_metacas
 	xor	eax, eax
 	jmp	SHORT $LN1@qt_metacas
 $LN2@qt_metacas:
-; Line 112
-	lea	rdx, OFFSET FLAT:?qt_meta_stringdata_Login@@3Uqt_meta_stringdata_Login_t@@B+96
+; Line 79
+	lea	rdx, OFFSET FLAT:?qt_meta_stringdata_Login@@3Uqt_meta_stringdata_Login_t@@B+24
 	mov	rcx, QWORD PTR _clname$[rsp]
 	call	strcmp
 	test	eax, eax
 	jne	SHORT $LN3@qt_metacas
-; Line 113
+; Line 80
 	mov	rax, QWORD PTR this$[rsp]
 	jmp	SHORT $LN1@qt_metacas
 $LN3@qt_metacas:
-; Line 114
+; Line 81
 	mov	rdx, QWORD PTR _clname$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
 	call	QWORD PTR __imp_?qt_metacast@QWidget@@UEAAPEAXPEBD@Z
 $LN1@qt_metacas:
-; Line 115
+; Line 82
 	add	rsp, 40					; 00000028H
 	ret	0
 ?qt_metacast@Login@@UEAAPEAXPEBD@Z ENDP			; Login::qt_metacast
@@ -584,12 +236,12 @@ _TEXT	SEGMENT
 tv82 = 32
 this$ = 64
 ?metaObject@Login@@UEBAPEBUQMetaObject@@XZ PROC		; Login::metaObject
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 105
+; File f:\computer\software\library\library\x64\debug\moc\moc_login.cpp
+; Line 72
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
 	sub	rsp, 56					; 00000038H
-; Line 106
+; Line 73
 	mov	rax, QWORD PTR this$[rsp]
 	add	rax, 8
 	mov	rcx, rax
@@ -609,7 +261,7 @@ $LN3@metaObject:
 	mov	QWORD PTR tv82[rsp], rax
 $LN4@metaObject:
 	mov	rax, QWORD PTR tv82[rsp]
-; Line 107
+; Line 74
 	add	rsp, 56					; 00000038H
 	ret	0
 ?metaObject@Login@@UEBAPEBUQMetaObject@@XZ ENDP		; Login::metaObject
@@ -635,8 +287,8 @@ _TEXT	SEGMENT
 __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 148
+; File f:\computer\software\library\library\x64\debug\moc\moc_login.cpp
+; Line 91
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
@@ -647,8 +299,8 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_login.cpp
-; Line 148
+; File f:\computer\software\library\library\x64\debug\moc\moc_login.cpp
+; Line 91
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0
 ?__empty_global_delete@@YAXPEAX@Z ENDP			; __empty_global_delete

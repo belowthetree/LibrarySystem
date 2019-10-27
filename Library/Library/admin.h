@@ -1,16 +1,16 @@
 #pragma once
-#include <QtWidgets/QMainWindow>
-#include "ui_admin.h"
 
-class QstackedWidget;
+#include <QWidget>
+#include "ui_Admin.h"
 
-class Admin : public QMainWindow
+class Admin : public QWidget
 {
 	Q_OBJECT
 
 public:
-	//Admin(QWidget *parent = Q_NULLPTR);
+	Admin(QWidget *parent = Q_NULLPTR);
+	~Admin();
 
 private:
-	Ui::AdminClass ui;
+	Ui::Admin ui;
 };

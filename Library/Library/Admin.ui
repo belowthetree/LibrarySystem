@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AdminClass</class>
- <widget class="QWidget" name="AdminClass">
+ <class>Admin</class>
+ <widget class="QWidget" name="Admin">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1222</width>
-    <height>803</height>
+    <width>1223</width>
+    <height>798</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>12</x>
-     <y>9</y>
+     <x>10</x>
+     <y>10</y>
      <width>1201</width>
      <height>781</height>
     </rect>
@@ -63,7 +63,7 @@
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab_12">
         <attribute name="title">
@@ -313,16 +313,6 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;图书编号&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
-        <widget class="QTextEdit" name="textEdit">
-         <property name="geometry">
-          <rect>
-           <x>260</x>
-           <y>50</y>
-           <width>321</width>
-           <height>31</height>
-          </rect>
-         </property>
-        </widget>
         <widget class="QPushButton" name="searchPushButton">
          <property name="geometry">
           <rect>
@@ -387,16 +377,6 @@
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;用户名(学号)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
-        <widget class="QTextEdit" name="textEdit_2">
-         <property name="geometry">
-          <rect>
-           <x>260</x>
-           <y>310</y>
-           <width>321</width>
-           <height>31</height>
-          </rect>
-         </property>
-        </widget>
         <widget class="QPushButton" name="searchPushButton_2">
          <property name="geometry">
           <rect>
@@ -448,6 +428,26 @@
           <string>借阅</string>
          </property>
         </widget>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>50</y>
+           <width>331</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>310</y>
+           <width>331</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
        </widget>
        <widget class="QWidget" name="tab_14">
         <attribute name="title">
@@ -464,16 +464,6 @@
          </property>
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;书名&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-        <widget class="QTextEdit" name="textEdit_3">
-         <property name="geometry">
-          <rect>
-           <x>250</x>
-           <y>60</y>
-           <width>321</width>
-           <height>31</height>
-          </rect>
          </property>
         </widget>
         <widget class="QLabel" name="label_4">
@@ -583,6 +573,16 @@
           <string>归还</string>
          </property>
         </widget>
+        <widget class="QLineEdit" name="lineEdit_3">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>60</y>
+           <width>331</width>
+           <height>31</height>
+          </rect>
+         </property>
+        </widget>
        </widget>
       </widget>
      </widget>
@@ -681,7 +681,7 @@
       <enum>QTabWidget::West</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
@@ -820,6 +820,7 @@
    </widget>
   </widget>
  </widget>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>

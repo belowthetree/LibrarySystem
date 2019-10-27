@@ -22,10 +22,9 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Editboard
+class Ui_EditBoard
 {
 public:
-    QLabel *label_2;
     QLabel *label_3;
     QTextEdit *textEdit_2;
     QTextEdit *textEdit_3;
@@ -33,27 +32,25 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
+    QLabel *label_2;
 
-    void setupUi(QWidget *Editboard)
+    void setupUi(QWidget *EditBoard)
     {
-        if (Editboard->objectName().isEmpty())
-            Editboard->setObjectName(QStringLiteral("Editboard"));
-        Editboard->resize(1003, 722);
-        label_2 = new QLabel(Editboard);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(140, 70, 101, 41));
-        label_3 = new QLabel(Editboard);
+        if (EditBoard->objectName().isEmpty())
+            EditBoard->setObjectName(QStringLiteral("EditBoard"));
+        EditBoard->resize(737, 617);
+        label_3 = new QLabel(EditBoard);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(140, 180, 101, 41));
-        textEdit_2 = new QTextEdit(Editboard);
+        label_3->setGeometry(QRect(50, 140, 101, 41));
+        textEdit_2 = new QTextEdit(EditBoard);
         textEdit_2->setObjectName(QStringLiteral("textEdit_2"));
-        textEdit_2->setGeometry(QRect(300, 80, 361, 31));
-        textEdit_3 = new QTextEdit(Editboard);
+        textEdit_2->setGeometry(QRect(210, 40, 361, 31));
+        textEdit_3 = new QTextEdit(EditBoard);
         textEdit_3->setObjectName(QStringLiteral("textEdit_3"));
-        textEdit_3->setGeometry(QRect(300, 180, 441, 311));
-        groupBox = new QGroupBox(Editboard);
+        textEdit_3->setGeometry(QRect(210, 140, 441, 311));
+        groupBox = new QGroupBox(EditBoard);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(280, 560, 481, 71));
+        groupBox->setGeometry(QRect(140, 500, 481, 71));
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(30, 20, 112, 34));
@@ -63,27 +60,30 @@ public:
         pushButton_3 = new QPushButton(groupBox);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
         pushButton_3->setGeometry(QRect(340, 20, 112, 34));
+        label_2 = new QLabel(EditBoard);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(50, 30, 101, 41));
 
-        retranslateUi(Editboard);
+        retranslateUi(EditBoard);
 
-        QMetaObject::connectSlotsByName(Editboard);
+        QMetaObject::connectSlotsByName(EditBoard);
     } // setupUi
 
-    void retranslateUi(QWidget *Editboard)
+    void retranslateUi(QWidget *EditBoard)
     {
-        Editboard->setWindowTitle(QApplication::translate("Editboard", "EditBoard", Q_NULLPTR));
-        label_2->setText(QApplication::translate("Editboard", "<html><head/><body><p><span style=\" font-size:11pt;\">\345\205\254\345\221\212\346\240\207\351\242\230</span></p></body></html>", Q_NULLPTR));
-        label_3->setText(QApplication::translate("Editboard", "<html><head/><body><p><span style=\" font-size:11pt;\">\345\205\254\345\221\212\345\206\205\345\256\271</span></p></body></html>", Q_NULLPTR));
+        EditBoard->setWindowTitle(QApplication::translate("EditBoard", "EditBoard", Q_NULLPTR));
+        label_3->setText(QApplication::translate("EditBoard", "<html><head/><body><p><span style=\" font-size:11pt;\">\345\205\254\345\221\212\345\206\205\345\256\271</span></p></body></html>", Q_NULLPTR));
         groupBox->setTitle(QString());
-        pushButton->setText(QApplication::translate("Editboard", "\346\267\273\345\212\240", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("Editboard", "\344\277\256\346\224\271", Q_NULLPTR));
-        pushButton_3->setText(QApplication::translate("Editboard", "\345\217\226\346\266\210", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("EditBoard", "\346\267\273\345\212\240", Q_NULLPTR));
+        pushButton_2->setText(QApplication::translate("EditBoard", "\344\277\256\346\224\271", Q_NULLPTR));
+        pushButton_3->setText(QApplication::translate("EditBoard", "\345\217\226\346\266\210", Q_NULLPTR));
+        label_2->setText(QApplication::translate("EditBoard", "<html><head/><body><p><span style=\" font-size:11pt;\">\345\205\254\345\221\212\346\240\207\351\242\230</span></p></body></html>", Q_NULLPTR));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Editboard: public Ui_Editboard {};
+    class EditBoard: public Ui_EditBoard {};
 } // namespace Ui
 
 QT_END_NAMESPACE
