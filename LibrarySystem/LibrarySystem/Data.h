@@ -3,58 +3,57 @@
 #include<fstream>
 
 using namespace std;
-// ä¹¦ç±ä¿¡æ¯
+// Êé¼®ĞÅÏ¢
 const int avglen = 30;
 const int book_info_size = 5 * avglen + sizeof(long) + sizeof(int) * 2 + sizeof(float);
-const int book_id_size = sizeof(int) + sizeof(long) + 1;
+const int book_id_size = avglen + sizeof(long) + 1;
 const int book_name_size = sizeof(long) + avglen;
 const string BookFile = "Book.dat";
-const string BookNameIndexFile = "BookNameIndex";
-const string BookIdIndexFile = "BookIdIndex";
+const string BookNameIndexFile = "BookNameIndex.dat";
+const string BookIdIndexFile = "BookIdIndex.dat";
 
 struct Book
 {
-	string isbn;			//ISBN
-	string name;		//ä¹¦å
-	string author;		//ä½œè€…
-	string press;		//å‡ºç‰ˆç¤¾
-	string category;	//å­¦ç§‘
-	//bool type;			//
-	long pubdate;		//å‡ºç‰ˆæ—¥æœŸ
-	int borrowNum;		//å½“å‰å€Ÿå‡ºçš„æ•°é‡
-	int num;			//å½“å‰æ•°é‡
-	float price;		//ä»·æ ¼
+	char id[avglen];			//ISBN
+	char name[avglen];		//ÊéÃû
+	char author[avglen];		//×÷Õß
+	char press[avglen];		//³ö°æÉç
+	char category[avglen];	//Ñ§¿Æ
+	long pubdate;		//³ö°æÈÕÆÚ
+	int borrowNum;		//µ±Ç°½è³öµÄÊıÁ¿
+	int num;			//µ±Ç°ÊıÁ¿
+	float price;		//¼Û¸ñ
 };
 
 struct BookNameIndex
 {
-	char name[avglen];	//ä¹¦å
-	long index;			//åœ°å€
+	char name[avglen];	//ÊéÃû
+	long index;			//µØÖ·
 };
 
 struct BookIdIndex
 {
-	char id[avglen];			//ä¹¦æœ¬ç¼–å·
-	long index;		//åœ°å€
-	char isBorrowed[1];	//æ˜¯å¦å€Ÿå‡º
+	char id[avglen];			//Êé±¾±àºÅ
+	long index;		//µØÖ·
+	char isBorrowed[1];	//ÊÇ·ñ½è³ö
 };
 
-// ç”¨æˆ·ä¿¡æ¯
+// ÓÃ»§ĞÅÏ¢
 const string UserFile = "User.dat";
 const int user_avglen = 30;
-const int user_info_size = user_avglen * 6 + sizeof(int) + sizeof(long) + 1;
+const int user_info_size = user_avglen * 7 + sizeof(int) + 2;
 
 struct User
 {
-	char id[user_avglen];					//å­¦å·¥å·
-	char realName[user_avglen];	//çœŸå®å§“å
-	char major[user_avglen];	//ä¸“ä¸š
-	char grade[user_avglen];	//å¹´çºª
-	char pwd[user_avglen];		//å¯†ç 
-	char phone[user_avglen];	//æ‰‹æœº
-	char email[user_avglen];	//é‚®ç®±
-	char sex[1];					//æ€§åˆ«
-	int age;					//å¹´é¾„
+	char id[user_avglen];		//Ñ§¹¤ºÅ
+	char realName[user_avglen];	//ÕæÊµĞÕÃû
+	char major[user_avglen];	//×¨Òµ
+	char grade[user_avglen];	//Äê¼Í
+	char pwd[user_avglen];		//ÃÜÂë
+	char phone[user_avglen];	//ÊÖ»ú
+	char email[user_avglen];	//ÓÊÏä
+	char sex[2];			 //ĞÔ±ğ
+	int age;					//ÄêÁä
 };
 
 void ltob(long n, char * s);
@@ -63,18 +62,19 @@ void ftob(float n, char *s);
 long btol(char *s);
 int btoi(char *s);
 float btof(char *s);
+void stoc(string str, char *s);
 bool cmp(char*s1, char*s2, int size);
 
-// å°†è¾“å…¥çš„ä¹¦ç±å†™å…¥æ–‡ä»¶
+// ½«ÊäÈëµÄÊé¼®Ğ´ÈëÎÄ¼ş
 void bookdown(Book* book, fstream*io);
 
-// ä»å­—ç¬¦ä¸²ä¸­æå–ç”¨æˆ·ä¿¡æ¯
+// ´Ó×Ö·û´®ÖĞÌáÈ¡ÓÃ»§ĞÅÏ¢
 User userup(char *content);
-// å°†ç”¨æˆ·ä¿¡æ¯å†™å…¥æ–‡ä»¶
+// ½«ÓÃ»§ĞÅÏ¢Ğ´ÈëÎÄ¼ş
 void userdown(User *user, fstream *io);
 
-// è¿”å›å­—ç¬¦ä¸²ä¸­çš„ BookIdIndex
+// ·µ»Ø×Ö·û´®ÖĞµÄ BookIdIndex
 BookIdIndex idup(char *content);
 
-// åˆ‡åˆ†å·¥å…·ï¼Œå°† s1 ä» offset å¼€å§‹ count ä¸ªå­—ç¬¦æ”¾å…¥ s2
+// ÇĞ·Ö¹¤¾ß£¬½« s1 ´Ó offset ¿ªÊ¼ count ¸ö×Ö·û·ÅÈë s2
 void split(char * s1, char *s2, int offset, int count);

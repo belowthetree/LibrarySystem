@@ -1,6 +1,6 @@
 #include "pch.h"
-#include"Data.h"
-// ä¸‹æ–¹ä¸ºé•¿æ•´å‹ã€æ•´å‹ã€æµ®ç‚¹å‹ä¸å­—ç¬¦ä¸²çš„è½¬æ¢
+#include "Data.h"
+// ÏÂ·½Îª³¤ÕûĞÍ¡¢ÕûĞÍ¡¢¸¡µãĞÍÓë×Ö·û´®µÄ×ª»»
 void ltob(long n, char * s)
 {
 	unsigned mask = 0xff;
@@ -75,6 +75,15 @@ float btof(char *s)
 	return *res;
 }
 
+void stoc(string str, char *s) {  //string ×ªÎª char
+	int i;
+	for (i = 0; i < str.length(); ++i)
+	{
+		s[i] = str[i];
+	}
+	s[i] = '\0';
+}
+
 bool cmp(char * s1, char * s2, int size)
 {
 	for (int i = 0; i < size; i++)
@@ -86,55 +95,54 @@ bool cmp(char * s1, char * s2, int size)
 void bookdown(Book* it, fstream*io)
 {
 	char tmp[200];
-	//å‰äº”é¡¹ string ï¼Œé•¿åº¦è§„å®šä¸º avglen
-	io->write((*it).isbn.c_str(), avglen);
-	io->write((*it).name.c_str(), avglen);
-	io->write((*it).author.c_str(), avglen);
-	io->write((*it).press.c_str(), avglen);
-	io->write((*it).category.c_str(), avglen);
+	//Ç°ÎåÏî string £¬³¤¶È¹æ¶¨Îª avglen
+	memcpy(tmp, (*it).id, avglen);
+	io->write((*it).id, avglen);
+	io->write((*it).name, avglen);
+	io->write((*it).author, avglen);
+	io->write((*it).press, avglen);
+	io->write((*it).category, avglen);
 
-	//å…¶ä»–æ•°æ®ä¾æ¬¡å†™å…¥
+	//ÆäËûÊı¾İÒÀ´ÎĞ´Èë
 	ltob((*it).pubdate, tmp);
 	io->write(tmp, sizeof(long));
-	io->write(tmp, 1);
 	itob((*it).borrowNum, tmp);
 	io->write(tmp, 4);
 	itob((*it).num, tmp);
 	io->write(tmp, 4);
 	ftob((*it).price, tmp);
-	io->write(tmp, 4);
+	io->write(tmp, sizeof(float));
 }
 
 User userup(char *content)
 {
-	User user;
-	char tmp[user_avglen + 5];
-	split(content, user.id, 0, user_avglen);
+	User tmp;
+	char t[avglen + 5];
 
-	split(content, user.realName, user_avglen, user_avglen);
-
-	split(content, user.major, user_avglen * 2, user_avglen);
-
-	split(content, user.grade, user_avglen * 3, user_avglen);
-
-	split(content, user.pwd, user_avglen * 4, user_avglen);
-
-	split(content, user.phone, user_avglen * 5, user_avglen);
-
-	split(content, user.email, user_avglen * 6, user_avglen);
-
-	split(content, user.sex, user_avglen * 7, 1);
-
-	split(content, tmp, user_avglen * 7 + 1, sizeof(int));
-	user.age = btoi(tmp);
-
-	return user;
+	split(content, t, 0, avglen);
+	strcpy_s(tmp.id, t);
+	split(content, t, avglen * 1, avglen);
+	strcpy_s(tmp.realName, t);
+	split(content, t, avglen * 2, avglen);
+	strcpy_s(tmp.major, t);
+	split(content, t, avglen * 3, avglen);
+	strcpy_s(tmp.grade, t);
+	split(content, t, avglen * 4, avglen);
+	strcpy_s(tmp.pwd, t);
+	split(content, t, avglen * 5, avglen);
+	strcpy_s(tmp.phone, t);
+	split(content, t, avglen * 6, avglen);
+	strcpy_s(tmp.email, t);
+	split(content, t, avglen * 7, 2);
+	strcpy_s(tmp.sex, t);
+	split(content, t, avglen * 7 + 2, sizeof(int));
+	tmp.age = btoi(t);
+	return tmp;
 }
 
 void userdown(User *user, fstream *io)
 {
 	char tmp[user_avglen + 5];
-
 	io->write(user->id, user_avglen);
 	io->write(user->realName, user_avglen);
 	io->write(user->major, user_avglen);
@@ -142,7 +150,7 @@ void userdown(User *user, fstream *io)
 	io->write(user->pwd, user_avglen);
 	io->write(user->phone, user_avglen);
 	io->write(user->email, user_avglen);
-	io->write(user->sex, 1);
+	io->write(user->sex, 2);
 	itob(user->age, tmp);
 	io->write(tmp, sizeof(int));
 }
@@ -156,7 +164,6 @@ BookIdIndex idup(char *content)
 	id.index = btol(tmp);
 	split(content, tmp, avglen + sizeof(long), 1);
 	id.isBorrowed[0] = tmp[0];
-
 	return id;
 }
 
