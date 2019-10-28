@@ -52,15 +52,20 @@ Book SearchTool::bookup(char * content)
 	Book tmp;
 	char t[avglen + 5];
 	split(content, t, 0, avglen);
-	memcpy(tmp.id, t, avglen);
+	split(t, tmp.id, 0, avglen);
+
 	split(content, t, avglen, avglen);
-	memcpy(tmp.name, t, avglen);
+	split(t, tmp.name, 0, avglen);
+
 	split(content, t, avglen * 2, avglen);
-	memcpy(tmp.author, t, avglen);
+	split(t, tmp.author, 0, avglen);
+
 	split(content, t, avglen * 3, avglen);
-	memcpy(tmp.press, t, avglen);
+	split(t, tmp.press, 0, avglen);
+
 	split(content, t, avglen * 4, avglen);
-	memcpy(tmp.category, t, avglen);
+	split(t, tmp.category, 0, avglen);
+
 	split(content, t, avglen * 5, sizeof(long));
 	tmp.pubdate = btol(t);
 	split(content, t, avglen * 5 + sizeof(long), sizeof(int));
@@ -198,6 +203,7 @@ pair<Book, BookIdIndex> SearchTool::SearchBookId(char id[avglen])
 		tmp[size] = '\0';
 		if (find(tmp, id))//判断编号是否匹配
 		{
+			book.second = idup(tmp);
 			//	将编号和地址分开
 			split(tmp, id, avglen, sizeof(long));
 			long idx = btol(id);
@@ -206,7 +212,7 @@ pair<Book, BookIdIndex> SearchTool::SearchBookId(char id[avglen])
 			in.seekg(idx, ios::beg);
 			in.read(tmp, bookInfoSize);
 			// bookup 将信息装入 Book 类型中
-			book = pair<Book, BookIdIndex>(bookup(tmp), bookidup(tmp));
+			book.first = bookup(tmp);
 			return book;
 		}
 	}

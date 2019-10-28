@@ -96,7 +96,6 @@ void bookdown(Book* it, fstream*io)
 {
 	char tmp[200];
 	//前五项 string ，长度规定为 avglen
-	memcpy(tmp, (*it).id, avglen);
 	io->write((*it).id, avglen);
 	io->write((*it).name, avglen);
 	io->write((*it).author, avglen);
@@ -112,16 +111,6 @@ void bookdown(Book* it, fstream*io)
 	io->write(tmp, 4);
 	ftob((*it).price, tmp);
 	io->write(tmp, sizeof(float));
-}
-
-BookIdIndex bookidup(char *content)
-{
-	BookIdIndex bookid;
-	char tmp[avglen];
-	split(content, bookid.id, 0, avglen);
-	split(content, tmp, avglen, sizeof(long));
-	bookid.index = btol(tmp);
-	bookid.isBorrowed[0] = content[book_id_size - 1];
 }
 
 User userup(char *content)

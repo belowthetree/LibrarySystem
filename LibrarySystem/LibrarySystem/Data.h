@@ -67,8 +67,6 @@ bool cmp(char*s1, char*s2, int size);
 
 // 将输入的书籍写入文件
 void bookdown(Book* book, fstream*io);
-// 提取编号信息
-BookIdIndex bookidup(char *content);
 
 // 从字符串中提取用户信息
 User userup(char *content);
