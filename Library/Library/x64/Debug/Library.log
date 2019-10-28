@@ -1,8 +1,61 @@
-﻿  Library.cpp
-  login.cpp
+﻿  uic AddBook.ui
+  uic AddFeedback.ui
+  uic AddMessage.ui
+  uic Admin.ui
+  uic BoardDetail.ui
+  uic BookInfo.ui
+  uic ChangeInformation.ui
+  uic ChangePassword.ui
+  uic DeleteBook.ui
+  uic DeleteMessage.ui
+  uic EditBoard.ui
+  uic FeedbackInfo.ui
+  uic Library.ui
+  uic MessageInfo.ui
+  uic MyMessage.ui
+  moc AddBook.h
+  moc AddFeedback.h
+  moc AddMessage.h
+  moc Admin.h
+  moc BoardDetail.h
+  moc BookInfo.h
+  moc ChangeInformation.h
+  moc ChangePassword.h
+  moc DeleteBook.h
+  moc EditBoard.h
+  moc FeedbackInfo.h
+  moc MyMessage.h
+  moc MessageInfo.h
+  moc DeleteMessage.h
+  AddBook.cpp
+  AddFeedback.cpp
+  AddMessage.cpp
+  Admin.cpp
+  BoardDetail.cpp
+  BookInfo.cpp
+  ChangeInformation.cpp
+  ChangePassword.cpp
+  DeleteBook.cpp
+  DeleteMessage.cpp
+  EditBoard.cpp
+  FeedbackInfo.cpp
+  Library.cpp
   main.cpp
-moc_login.obj : warning LNK4099: 未找到 PDB“vc141.pdb”(使用“moc_login.obj”或在“F:\cloud\LibrarySystem\Library\x64\Debug\vc141.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-moc_Library.obj : warning LNK4099: 未找到 PDB“vc141.pdb”(使用“moc_Library.obj”或在“F:\cloud\LibrarySystem\Library\x64\Debug\vc141.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-moc_admin.obj : warning LNK4099: 未找到 PDB“vc141.pdb”(使用“moc_admin.obj”或在“F:\cloud\LibrarySystem\Library\x64\Debug\vc141.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-qrc_Library.obj : warning LNK4099: 未找到 PDB“vc141.pdb”(使用“qrc_Library.obj”或在“F:\cloud\LibrarySystem\Library\x64\Debug\vc141.pdb”中寻找)；正在链接对象，如同没有调试信息一样
-  Library.vcxproj -> F:\cloud\LibrarySystem\Library\x64\Debug\Library.exe
+  MessageInfo.cpp
+  MyMessage.cpp
+  moc_Library.cpp
+  moc_AddBook.cpp
+  moc_AddFeedback.cpp
+  moc_AddMessage.cpp
+  moc_Admin.cpp
+  moc_BoardDetail.cpp
+  moc_ChangeInformation.cpp
+  moc_BookInfo.cpp
+  moc_ChangePassword.cpp
+  moc_DeleteBook.cpp
+  moc_EditBoard.cpp
+  moc_FeedbackInfo.cpp
+  moc_MyMessage.cpp
+  moc_MessageInfo.cpp
+  moc_DeleteMessage.cpp
+  Library.vcxproj -> F:\computer\software\Library\x64\Debug\Library.exe

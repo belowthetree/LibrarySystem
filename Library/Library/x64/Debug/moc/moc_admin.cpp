@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'admin.h'
+** Meta object code from reading C++ file 'Admin.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../admin.h"
+#include "../../../Admin.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'admin.h' doesn't include <QObject>."
+#error "The header file 'Admin.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.9.0. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -63,7 +63,7 @@ void Admin::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
 }
 
 const QMetaObject Admin::staticMetaObject = {
-    { &QMainWindow::staticMetaObject, qt_meta_stringdata_Admin.data,
+    { &QWidget::staticMetaObject, qt_meta_stringdata_Admin.data,
       qt_meta_data_Admin,  qt_static_metacall, nullptr, nullptr}
 };
 
@@ -78,12 +78,12 @@ void *Admin::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_Admin.stringdata0))
         return static_cast<void*>(const_cast< Admin*>(this));
-    return QMainWindow::qt_metacast(_clname);
+    return QWidget::qt_metacast(_clname);
 }
 
 int Admin::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QMainWindow::qt_metacall(_c, _id, _a);
+    _id = QWidget::qt_metacall(_c, _id, _a);
     return _id;
 }
 QT_WARNING_POP

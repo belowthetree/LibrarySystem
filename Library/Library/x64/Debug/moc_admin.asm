@@ -6,53 +6,45 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG155918 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+$SG155849 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG155919 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG155850 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG155920 DB	'qRegisterNormalizedMetaType', 00H
+$SG155851 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG156213 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+$SG156626 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG156214 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG156627 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG156215 DB	'qRegisterNormalizedMetaType', 00H
+$SG156628 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG156990 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+$SG156921 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG156991 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG156922 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG156992 DB	'qRegisterNormalizedMetaType', 00H
+$SG156923 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG157285 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+$SG157216 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG157286 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG157217 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG157287 DB	'qRegisterNormalizedMetaType', 00H
+$SG157218 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG157580 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+$SG157560 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG157581 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG157561 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG157582 DB	'qRegisterNormalizedMetaType', 00H
-	ORG $+4
-$SG157924 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
-	DB	00H
-	ORG $+7
-$SG157925 DB	'qRegisterNormalizedMetaType was called with a not normal'
-	DB	'ized type name, please call qRegisterMetaType instead.', 00H
-	ORG $+1
-$SG157926 DB	'qRegisterNormalizedMetaType', 00H
+$SG157562 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
 ?qt_meta_stringdata_Admin@@3Uqt_meta_stringdata_Admin_t@@B DD 0ffffffffH ; qt_meta_stringdata_Admin
 	DD	05H
@@ -82,21 +74,29 @@ $SG157926 DB	'qRegisterNormalizedMetaType', 00H
 	DD	00H
 	DD	00H
 	ORG $+4
-$SG153501 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+$SG153137 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG153502 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG153138 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG153503 DB	'qRegisterNormalizedMetaType', 00H
+$SG153139 DB	'qRegisterNormalizedMetaType', 00H
 	ORG $+4
-$SG155623 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+$SG155259 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
 	DB	00H
 	ORG $+7
-$SG155624 DB	'qRegisterNormalizedMetaType was called with a not normal'
+$SG155260 DB	'qRegisterNormalizedMetaType was called with a not normal'
 	DB	'ized type name, please call qRegisterMetaType instead.', 00H
 	ORG $+1
-$SG155625 DB	'qRegisterNormalizedMetaType', 00H
+$SG155261 DB	'qRegisterNormalizedMetaType', 00H
+	ORG $+4
+$SG155554 DB	'g:\qt\qt5.9.0\5.9\msvc2017_64\include\qtcore\qmetatype.h'
+	DB	00H
+	ORG $+7
+$SG155555 DB	'qRegisterNormalizedMetaType was called with a not normal'
+	DB	'ized type name, please call qRegisterMetaType instead.', 00H
+	ORG $+1
+$SG155556 DB	'qRegisterNormalizedMetaType', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
@@ -108,9 +108,9 @@ PUBLIC	?qt_static_metacall@Admin@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z
 PUBLIC	?staticMetaObject@Admin@@2UQMetaObject@@B	; Admin::staticMetaObject
 EXTRN	strcmp:PROC
 EXTRN	__imp_?dynamicMetaObject@QObjectData@@QEBAPEAUQMetaObject@@XZ:PROC
-EXTRN	__imp_?qt_metacast@QMainWindow@@UEAAPEAXPEBD@Z:PROC
-EXTRN	__imp_?qt_metacall@QMainWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z:PROC
-EXTRN	__imp_?staticMetaObject@QMainWindow@@2UQMetaObject@@B:BYTE
+EXTRN	__imp_?qt_metacast@QWidget@@UEAAPEAXPEBD@Z:PROC
+EXTRN	__imp_?qt_metacall@QWidget@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z:PROC
+EXTRN	__imp_?staticMetaObject@QWidget@@2UQMetaObject@@B:BYTE
 _BSS	SEGMENT
 ?staticMetaObject@Admin@@2UQMetaObject@@B DB 030H DUP (?) ; Admin::staticMetaObject
 _BSS	ENDS
@@ -140,9 +140,9 @@ xdata	ENDS
 ;	COMDAT ??__E?staticMetaObject@Admin@@2UQMetaObject@@B@@YAXXZ
 text$di	SEGMENT
 ??__E?staticMetaObject@Admin@@2UQMetaObject@@B@@YAXXZ PROC ; `dynamic initializer for 'Admin::staticMetaObject'', COMDAT
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_admin.cpp
+; File f:\computer\software\library\library\x64\debug\moc\moc_admin.cpp
 ; Line 66
-	mov	rax, QWORD PTR __imp_?staticMetaObject@QMainWindow@@2UQMetaObject@@B
+	mov	rax, QWORD PTR __imp_?staticMetaObject@QWidget@@2UQMetaObject@@B
 	mov	QWORD PTR ?staticMetaObject@Admin@@2UQMetaObject@@B, rax
 	lea	rax, OFFSET FLAT:?qt_meta_stringdata_Admin@@3Uqt_meta_stringdata_Admin_t@@B
 	mov	QWORD PTR ?staticMetaObject@Admin@@2UQMetaObject@@B+8, rax
@@ -163,7 +163,7 @@ _c$ = 16
 _id$ = 24
 _a$ = 32
 ?qt_static_metacall@Admin@@CAXPEAVQObject@@W4Call@QMetaObject@@HPEAPEAX@Z PROC ; Admin::qt_static_metacall
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_admin.cpp
+; File f:\computer\software\library\library\x64\debug\moc\moc_admin.cpp
 ; Line 58
 	mov	QWORD PTR [rsp+32], r9
 	mov	DWORD PTR [rsp+24], r8d
@@ -180,7 +180,7 @@ _c$ = 56
 _id$ = 64
 _a$ = 72
 ?qt_metacall@Admin@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z PROC ; Admin::qt_metacall
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_admin.cpp
+; File f:\computer\software\library\library\x64\debug\moc\moc_admin.cpp
 ; Line 85
 $LN3:
 	mov	QWORD PTR [rsp+32], r9
@@ -193,7 +193,7 @@ $LN3:
 	mov	r8d, DWORD PTR _id$[rsp]
 	mov	edx, DWORD PTR _c$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
-	call	QWORD PTR __imp_?qt_metacall@QMainWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
+	call	QWORD PTR __imp_?qt_metacall@QWidget@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z
 	mov	DWORD PTR _id$[rsp], eax
 ; Line 87
 	mov	eax, DWORD PTR _id$[rsp]
@@ -207,7 +207,7 @@ _TEXT	SEGMENT
 this$ = 48
 _clname$ = 56
 ?qt_metacast@Admin@@UEAAPEAXPEBD@Z PROC			; Admin::qt_metacast
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_admin.cpp
+; File f:\computer\software\library\library\x64\debug\moc\moc_admin.cpp
 ; Line 77
 $LN5:
 	mov	QWORD PTR [rsp+16], rdx
@@ -232,7 +232,7 @@ $LN3@qt_metacas:
 ; Line 81
 	mov	rdx, QWORD PTR _clname$[rsp]
 	mov	rcx, QWORD PTR this$[rsp]
-	call	QWORD PTR __imp_?qt_metacast@QMainWindow@@UEAAPEAXPEBD@Z
+	call	QWORD PTR __imp_?qt_metacast@QWidget@@UEAAPEAXPEBD@Z
 $LN1@qt_metacas:
 ; Line 82
 	add	rsp, 40					; 00000028H
@@ -244,7 +244,7 @@ _TEXT	SEGMENT
 tv82 = 32
 this$ = 64
 ?metaObject@Admin@@UEBAPEBUQMetaObject@@XZ PROC		; Admin::metaObject
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_admin.cpp
+; File f:\computer\software\library\library\x64\debug\moc\moc_admin.cpp
 ; Line 72
 $LN5:
 	mov	QWORD PTR [rsp+8], rcx
@@ -295,7 +295,7 @@ _TEXT	SEGMENT
 __formal$ = 8
 __formal$ = 16
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_admin.cpp
+; File f:\computer\software\library\library\x64\debug\moc\moc_admin.cpp
 ; Line 91
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
@@ -307,7 +307,7 @@ _TEXT	ENDS
 _TEXT	SEGMENT
 __formal$ = 8
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
-; File f:\cloud\librarysystem\library\library\x64\debug\moc\moc_admin.cpp
+; File f:\computer\software\library\library\x64\debug\moc\moc_admin.cpp
 ; Line 91
 	mov	QWORD PTR [rsp+8], rcx
 	ret	0

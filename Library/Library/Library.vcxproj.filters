@@ -31,7 +31,49 @@
     <ClCompile Include="Library.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="login.cpp">
+    <ClCompile Include="Login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddFeedback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Admin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardDetail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BookInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeInformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangePassword.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FeedbackInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteMessage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,10 +81,49 @@
     <QtMoc Include="Library.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="login.h">
+    <QtMoc Include="Login.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="admin.h">
+    <QtMoc Include="AddBook.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AddFeedback.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AddMessage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Admin.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="BoardDetail.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="BookInfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ChangeInformation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ChangePassword.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DeleteBook.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="EditBoard.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="FeedbackInfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyMessage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MessageInfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DeleteMessage.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -53,46 +134,46 @@
     <QtUic Include="Login.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="AddBook.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
     <QtUic Include="AddFeedback.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="BoardDetail.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="DeleteMessage.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="MyMessage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="AddMessage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="AddBook.ui">
+    <QtUic Include="Admin.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="ChangePassword.ui">
+    <QtUic Include="BoardDetail.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="BookInfo.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="ChangeInformation.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="EditBoard.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="Admin.ui">
+    <QtUic Include="ChangePassword.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="DeleteBook.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="MessageInfo.ui">
+    <QtUic Include="EditBoard.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="FeedbackInfo.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="BookInfo.ui">
+    <QtUic Include="MyMessage.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MessageInfo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DeleteMessage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

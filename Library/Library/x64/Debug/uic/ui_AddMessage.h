@@ -35,16 +35,16 @@ public:
     {
         if (AddMessage->objectName().isEmpty())
             AddMessage->setObjectName(QStringLiteral("AddMessage"));
-        AddMessage->resize(872, 593);
+        AddMessage->resize(989, 700);
         label_3 = new QLabel(AddMessage);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(380, 40, 101, 31));
+        label_3->setGeometry(QRect(420, 50, 101, 31));
         textEdit_3 = new QTextEdit(AddMessage);
         textEdit_3->setObjectName(QStringLiteral("textEdit_3"));
-        textEdit_3->setGeometry(QRect(250, 110, 411, 271));
+        textEdit_3->setGeometry(QRect(290, 120, 411, 271));
         groupBox = new QGroupBox(AddMessage);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(260, 450, 381, 71));
+        groupBox->setGeometry(QRect(300, 460, 381, 71));
         pushButton = new QPushButton(groupBox);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(30, 20, 112, 34));

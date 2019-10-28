@@ -88,29 +88,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtMoc Include="admin.h" />
+    <ClCompile Include="AddBook.cpp" />
+    <ClCompile Include="AddFeedback.cpp" />
+    <ClCompile Include="AddMessage.cpp" />
+    <ClCompile Include="Admin.cpp" />
+    <ClCompile Include="BoardDetail.cpp" />
+    <ClCompile Include="BookInfo.cpp" />
+    <ClCompile Include="ChangeInformation.cpp" />
+    <ClCompile Include="ChangePassword.cpp" />
+    <ClCompile Include="DeleteBook.cpp" />
+    <ClCompile Include="DeleteMessage.cpp" />
+    <ClCompile Include="EditBoard.cpp" />
+    <ClCompile Include="FeedbackInfo.cpp" />
     <ClCompile Include="Library.cpp" />
-    <ClCompile Include="login.cpp" />
+    <ClCompile Include="Login.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageInfo.cpp" />
+    <ClCompile Include="MyMessage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Library.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="BookInfo.ui" />
-    <QtUic Include="DeleteBook.ui" />
-    <QtUic Include="EditBoard.ui" />
     <QtUic Include="AddBook.ui" />
     <QtUic Include="AddFeedback.ui" />
+    <QtUic Include="AddMessage.ui" />
     <QtUic Include="Admin.ui" />
     <QtUic Include="BoardDetail.ui" />
+    <QtUic Include="BookInfo.ui" />
     <QtUic Include="ChangeInformation.ui" />
     <QtUic Include="ChangePassword.ui" />
+    <QtUic Include="DeleteBook.ui" />
     <QtUic Include="DeleteMessage.ui" />
+    <QtUic Include="EditBoard.ui" />
     <QtUic Include="FeedbackInfo.ui" />
     <QtUic Include="Library.ui" />
     <QtUic Include="Login.ui" />
-    <QtUic Include="AddMessage.ui" />
     <QtUic Include="MessageInfo.ui" />
     <QtUic Include="MyMessage.ui" />
   </ItemGroup>
@@ -118,7 +131,49 @@
     <QtRcc Include="Library.qrc" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="login.h" />
+    <QtMoc Include="Login.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AddBook.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AddFeedback.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AddMessage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Admin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="BoardDetail.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="BookInfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ChangeInformation.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ChangePassword.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="DeleteBook.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="EditBoard.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="FeedbackInfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MyMessage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MessageInfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="DeleteMessage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
