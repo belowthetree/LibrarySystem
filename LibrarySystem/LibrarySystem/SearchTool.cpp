@@ -52,20 +52,15 @@ Book SearchTool::bookup(char * content)
 	Book tmp;
 	char t[avglen + 5];
 	split(content, t, 0, avglen);
-	split(t, tmp.id, 0, avglen);
-
+	memcpy(tmp.id, t, avglen);
 	split(content, t, avglen, avglen);
-	split(t, tmp.name, 0, avglen);
-
-	split(t, content, avglen * 2, avglen);
-	split(t, tmp.author, 0, avglen);
-
+	memcpy(tmp.name, t, avglen);
+	split(content, t, avglen * 2, avglen);
+	memcpy(tmp.author, t, avglen);
 	split(content, t, avglen * 3, avglen);
-	split(t, tmp.press, 0, avglen);
-
+	memcpy(tmp.press, t, avglen);
 	split(content, t, avglen * 4, avglen);
-	split(t, tmp.category, 0, avglen);
-
+	memcpy(tmp.category, t, avglen);
 	split(content, t, avglen * 5, sizeof(long));
 	tmp.pubdate = btol(t);
 	split(content, t, avglen * 5 + sizeof(long), sizeof(int));
@@ -144,7 +139,7 @@ std::vector<pair<Book, long>> SearchTool::SearchBookName(std::string name)
 	else if (len <= 5)
 	{
 		std::string name1 = name.substr(0, len / 2);
-		std::string name2 = name.substr(len / 2, len / 2);
+		std::string name2 = name.substr(len / 2, len);
 		std::thread th1(SubSearch, name1);
 		std::thread th2(SubSearch, name2);
 
@@ -154,8 +149,8 @@ std::vector<pair<Book, long>> SearchTool::SearchBookName(std::string name)
 	else
 	{
 		std::string name1 = name.substr(0, len / 3);
-		std::string name2 = name.substr(len / 3, len / 3);
-		std::string name3 = name.substr(len / 3 * 2, len / 3);
+		std::string name2 = name.substr(len / 3, len / 3 * 2);
+		std::string name3 = name.substr(len / 3 * 2, len);
 		std::thread th1(SubSearch, name1);
 		std::thread th2(SubSearch, name2);
 		std::thread th3(SubSearch, name3);
@@ -188,11 +183,11 @@ std::vector<pair<Book, long>> SearchTool::SearchBookName(std::string name)
 }
 
 // 按照编号查找书本信息
-pair<Book, long> SearchTool::SearchBookId(char id[avglen])
+pair<Book, BookIdIndex> SearchTool::SearchBookId(char id[avglen])
 {
 	ifstream io(BookIdIndexFile, ios::in | ios::binary);
-	pair<Book, long> book;
-	book.second = -1;
+	pair<Book, BookIdIndex> book;
+	book.second.index = -1;
 	// 得到一个编号对应的大小：Id + 地址
 	int size = book_id_size;
 	char tmp[500];
@@ -211,7 +206,7 @@ pair<Book, long> SearchTool::SearchBookId(char id[avglen])
 			in.seekg(idx, ios::beg);
 			in.read(tmp, bookInfoSize);
 			// bookup 将信息装入 Book 类型中
-			book = pair<Book, long>(bookup(tmp), idx);
+			book = pair<Book, BookIdIndex>(bookup(tmp), bookidup(tmp));
 			return book;
 		}
 	}

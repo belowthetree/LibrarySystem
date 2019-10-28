@@ -35,7 +35,6 @@ void GenerateData::CreateBook(vector<Book> book)
 			long idx = addr * size;
 			ltob(idx, s);
 			out.write(s, sizeof(long));
-			addr += size;
 
 			s[0] = 0;
 			out.write(s, 1);
@@ -53,7 +52,6 @@ void GenerateData::CreateBook(vector<Book> book)
 		long idx = addr * size;
 		ltob(idx, s);
 		out.write(s, sizeof(long));
-		addr += size;
 	}
 	out.close();
 }
@@ -61,9 +59,7 @@ void GenerateData::CreateBook(vector<Book> book)
 void GenerateData::CreateUser(vector<User> user)
 {
 	int size = user_info_size;
-	long addr = 0;
 	ofstream out("User.dat", ios::out | ios::binary | ios::trunc);
-	addr = out.tellp();
 	for (vector<User>::iterator it = user.begin(); it != user.end(); it++)
 	{
 		char tmp[200];
@@ -85,17 +81,15 @@ void GenerateData::CreateUser(vector<User> user)
 	out.close();
 	int len = user.size();
 	out.open("UserIdIndex.dat", ios::out | ios::binary | ios::app);
-	
 	for (int i = 0; i < len; i++)
 	{
 		char tmp[100];
 		out.write(user[i].id, user_avglen);
 
 		//µØÖ·
-		long idx = addr * size;
+		long idx = i * size;
 		ltob(idx, tmp);
 		out.write(tmp, sizeof(long));
-		addr += size;
 	}
 	out.close();
 }
